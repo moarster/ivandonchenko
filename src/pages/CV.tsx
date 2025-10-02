@@ -1,6 +1,6 @@
 import { Card } from '@/components/ui/Card';
 import { useLanguage } from '@/hooks/useLanguage';
-import { Download, Briefcase, GraduationCap, Code, Database, Users } from 'lucide-react';
+import { HiDownload, HiBriefcase, HiAcademicCap, HiCode, HiDatabase, HiUsers } from 'react-icons/hi';
 import { Button } from '@/components/ui/Button';
 
 export function CV() {
@@ -10,19 +10,19 @@ export function CV() {
     en: {
       title: 'Skills & Expertise',
       items: [
-        { icon: <Code />, title: 'Development', desc: 'Java, JavaScript, TypeScript, Python, React, Node.js' },
-        { icon: <Database />, title: 'Databases', desc: 'PostgreSQL, Oracle, MongoDB' },
-        { icon: <Users />, title: 'Management', desc: 'Team Lead, Project Management, Requirements Analysis' },
-        { icon: <Briefcase />, title: 'Architecture', desc: 'Software Architecture, BPM, System Design' },
+        { icon: <HiCode />, title: 'Development', desc: 'Java, JavaScript, TypeScript, Python, React, Node.js' },
+        { icon: <HiDatabase />, title: 'Databases', desc: 'PostgreSQL, Oracle, MongoDB' },
+        { icon: <HiUsers />, title: 'Management', desc: 'Team Lead, Project Management, Requirements Analysis' },
+        { icon: <HiBriefcase />, title: 'Architecture', desc: 'Software Architecture, BPM, System Design' },
       ],
     },
     ru: {
       title: 'Навыки и экспертиза',
       items: [
-        { icon: <Code />, title: 'Разработка', desc: 'Java, JavaScript, TypeScript, Python, React, Node.js' },
-        { icon: <Database />, title: 'Базы данных', desc: 'PostgreSQL, Oracle, MongoDB' },
-        { icon: <Users />, title: 'Управление', desc: 'Team Lead, управление проектами, анализ требований' },
-        { icon: <Briefcase />, title: 'Архитектура', desc: 'Архитектура ПО, BPM, проектирование систем' },
+        { icon: <HiCode />, title: 'Разработка', desc: 'Java, JavaScript, TypeScript, Python, React, Node.js' },
+        { icon: <HiDatabase />, title: 'Базы данных', desc: 'PostgreSQL, Oracle, MongoDB' },
+        { icon: <HiUsers />, title: 'Управление', desc: 'Team Lead, управление проектами, анализ требований' },
+        { icon: <HiBriefcase />, title: 'Архитектура', desc: 'Архитектура ПО, BPM, проектирование систем' },
       ],
     },
   };
@@ -104,7 +104,7 @@ export function CV() {
           </p>
         </div>
         <Button>
-          <Download className="w-4 h-4 mr-2" />
+          <HiDownload className="w-4 h-4 mr-2" />
           {language === 'en' ? 'Download PDF' : 'Скачать PDF'}
         </Button>
       </div>
@@ -159,7 +159,7 @@ export function CV() {
         </h2>
         <Card className="p-6">
           <div className="flex items-start gap-4">
-            <GraduationCap className="w-8 h-8 text-primary-500 flex-shrink-0" />
+            <HiAcademicCap className="w-8 h-8 text-primary-500 flex-shrink-0" />
             <div>
               <h3 className="font-bold text-xl mb-1">{currentEducation.degree}</h3>
               <p className="text-primary-500 mb-2">{currentEducation.school}</p>

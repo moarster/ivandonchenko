@@ -1,5 +1,5 @@
 import {  Link } from 'react-router-dom';
-import { ArrowLeft, Calendar, Clock } from 'lucide-react';
+import { HiArrowLeft, HiCalendar, HiClock } from 'react-icons/hi';
 import { MarkdownRenderer } from '@/components/MarkdownRenderer';
 import { useLanguage } from '@/hooks/useLanguage';
 import { Button } from '@/components/ui/Button';
@@ -30,7 +30,7 @@ More content...`,
             <div className="max-w-3xl mx-auto">
                 <Button variant="ghost" asChild className="mb-8">
                     <Link to="/blog">
-                        <ArrowLeft className="w-4 h-4 mr-2" />
+                        <HiArrowLeft className="w-4 h-4 mr-2" />
                         {language === 'en' ? 'Back to Blog' : 'Назад к блогу'}
                     </Link>
                 </Button>
@@ -40,11 +40,11 @@ More content...`,
                         <h1 className="text-4xl font-display font-bold mb-4">{post.title}</h1>
                         <div className="flex flex-wrap items-center gap-4 text-slate-600 dark:text-slate-400">
                             <div className="flex items-center gap-2">
-                                <Calendar className="w-4 h-4" />
+                                <HiCalendar className="w-4 h-4" />
                                 <span>{new Date(post.date).toLocaleDateString(language)}</span>
                             </div>
                             <div className="flex items-center gap-2">
-                                <Clock className="w-4 h-4" />
+                                <HiClock className="w-4 h-4" />
                                 <span>
                   {post.readTime} {language === 'en' ? 'min read' : 'мин чтения'}
                 </span>

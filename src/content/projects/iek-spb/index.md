@@ -11,13 +11,6 @@ client: "Комитет по энергетике и инженерному об
 customer: "СПб ГУП «СПб ИАЦ»"
 executor: "Gost Group"
 cover: "/images/projects/iek-spb.ru.png"
-resources:
-  - name: wireframes
-    src: wireframes.pdf
-    title: Проволочные мокапы
-  - name: presentation
-    src: main.mp4
-    title: Презентация запуска системы
 ---
 
  - **Период реализации:** Октябрь 2017 — Январь 2020

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Code, Briefcase, BookOpen } from 'lucide-react';
+import { HiArrowRight, HiCode, HiBriefcase, HiBookOpen } from 'react-icons/hi';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { useLanguage } from '@/hooks/useLanguage';
@@ -9,7 +9,7 @@ export function Home() {
 
     const features = [
         {
-            icon: <Code className="w-8 h-8" />,
+            icon: <HiCode className="w-8 h-8" />,
             title: language === 'en' ? 'Software Architecture' : 'Архитектура ПО',
             description: language === 'en'
                 ? '12+ years of experience designing scalable systems'
@@ -17,7 +17,7 @@ export function Home() {
             link: '/cv',
         },
         {
-            icon: <Briefcase className="w-8 h-8" />,
+            icon: <HiBriefcase className="w-8 h-8" />,
             title: language === 'en' ? 'Major Projects' : 'Крупные проекты',
             description: language === 'en'
                 ? 'Government and commercial projects from scratch to production'
@@ -25,7 +25,7 @@ export function Home() {
             link: '/projects',
         },
         {
-            icon: <BookOpen className="w-8 h-8" />,
+            icon: <HiBookOpen className="w-8 h-8" />,
             title: language === 'en' ? 'Technical Blog' : 'Технический блог',
             description: language === 'en'
                 ? 'Sharing real-world cases and architectural decisions'
@@ -50,7 +50,7 @@ export function Home() {
                     <Button size="lg" asChild>
                         <Link to="/contact">
                             {language === 'en' ? 'Get in Touch' : 'Связаться'}
-                            <ArrowRight className="ml-2 w-5 h-5" />
+                            <HiArrowRight className="ml-2 w-5 h-5" />
                         </Link>
                     </Button>
                     <Button size="lg" variant="secondary" asChild>
@@ -71,7 +71,7 @@ export function Home() {
                             className="text-primary-500 hover:text-primary-600 inline-flex items-center gap-2"
                         >
                             {t('readMore')}
-                            <ArrowRight className="w-4 h-4" />
+                            <HiArrowRight className="w-4 h-4" />
                         </Link>
                     </Card>
                 ))}

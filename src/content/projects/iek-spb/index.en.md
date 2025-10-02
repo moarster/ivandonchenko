@@ -9,7 +9,7 @@ role: ["System Architect "]
 client: Committee for Energy and Engineering Support of St. Petersburg
 customer: St. Petersburg Information and Analytical Center
 executor: Gost Group
-cover: "/images/projects/iek-spb.en.png"
+cover: "/images/projects/iek-spb.cover.png"
 ---
 
 **Implementation Period:** October 2017 — January 2020

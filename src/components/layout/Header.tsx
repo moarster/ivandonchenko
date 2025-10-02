@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Menu } from 'lucide-react';
+import { HiMenu } from 'react-icons/hi';
 import { useState } from 'react';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
 import { useLanguage } from '@/hooks/useLanguage';
@@ -55,7 +55,7 @@ export function Header() {
                             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                             aria-label="Toggle menu"
                         >
-                            <Menu className="w-6 h-6" />
+                            <HiMenu className="w-6 h-6" />
                         </button>
                     </div>
                 </div>

@@ -1,9 +1,12 @@
 ---
 title: "Information System of the Russian Football Union"
 date: 2021-06-21
+datePeriod: '2021-10-15 - 2023-01-31'
 description: "Digital transformation project of the RFU, developed on the Soarse platform"
 weight: 9
-cover: "/images/projects/rfs.en.png"
+cover: "/images/projects/rfs.cover.png"
+client: Генеральная прокуратура РФ
+role: Архитектор
 ---
 
 In 2020, the Russian Football Union (RFU) launched a digital platform developed in collaboration with **Gost Group**, based on the domestic software **GOST Platform**.  

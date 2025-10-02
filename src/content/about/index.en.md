@@ -1,8 +1,3 @@
----
-title: "About Me"
-date: 2025-04-12T09:27:48+03:00
----
-
 ![My photo](/images/userpic.jpg)
 
 > Throughout my professional journey, I've worn many hats. Starting as a developer, I progressed to team lead, project manager, and eventually headed an entire department. When my work began lacking creative fulfillment, I returned to my roots — first as a business architect and product owner, then fully immersing myself in code as a systems architect.

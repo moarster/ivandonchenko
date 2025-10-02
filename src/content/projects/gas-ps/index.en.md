@@ -2,14 +2,17 @@
 full-title: State Legal Statistics System
 title: GAS PS
 date: 2023-02-01
+datePeriod: '2021-10-15 - 2023-01-31'
 description: "MDM and metadata component based on Soarse within the GAS PS Portal of the General Prosecutor's Office of the Russian Federation"
 weight: 8
-cover: "/images/projects/gas-ps.en.png"
+cover: "/images/projects/gas-ps.cover.png"
+client: General Prosecutor's Office
+role: Architect
 ---
 
-From October 15, 2021 to January 31, 2023, our team participated in a large-scale government project to create the **GAS PS Portal** — a centralized digital platform for collecting, analyzing, and managing legal statistics in Russia.
+From October 15, 2021, to January 31, 2023, our team participated in a large-scale government project to create the **GAS PS Portal** — a centralized digital platform for collecting, analyzing, and managing legal statistics in Russia.
 
-The project was implemented jointly with **Gost Group** under the order of the **General Prosecutor's Office of the Russian Federation**.  
+The project for **General Prosecutor's Office of the Russian Federation** was pulled off alongside with **Gost Group**.  
 We were responsible for developing the component **"Regulatory Reference Data and Metadata Management"**, based on our own product **Soarse**.
 
 ---
@@ -23,8 +26,6 @@ As part of the Portal, the Soarse component handled several key tasks:
 - Setup and validation of format-logical control (FLC) rules
 - Management of criminal case status model
 - Integration with other system components via API
-
-Under the hood was a **web-based NoSQL DBMS**, storing data in JSON format and configured entirely through a DBA-level UI interface.
 
 ---
 
@@ -53,8 +54,7 @@ Unlike classic SQL views, in Soarse:
 - **Alias** support for attribute naming
 - Conditional row/cell formatting
 - An equivalent of **UNION** — which we called **docking**
-- And our proudest feature — an equivalent of **JOIN**:  
-  called **coupling**, it links data at any nesting level, including reverse relations (FK → PK), via **relationship indexing in an Apache Jena–based RDF store**
+- And our proudest feature — an equivalent of **JOIN**, called **coupling**, that links data at any nesting level, including reverse relations (FK → PK), through the **relationship indexing mechanism in an RDF store**
 
 ---
 
@@ -79,9 +79,3 @@ Soarse enabled users to:
 - Implemented a full-featured view engine with graph relationships in Soarse
 - Reached a new level of **integration maturity**: REST API became not just external, but the backbone of the business logic
 
----
-
-## Role in the Project
-
-- **Architect**, **Analyst**, **Product Owner**
-- Responsible for the technical design of the Soarse component within the system

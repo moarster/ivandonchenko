@@ -1,6 +1,6 @@
 import { Card } from '@/components/ui/Card';
 import { useLanguage } from '@/hooks/useLanguage';
-import { Calendar, Clock, Tag } from 'lucide-react';
+import { HiCalendar, HiClock, HiTag } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
 
 export function Blog() {
@@ -39,11 +39,11 @@ export function Blog() {
                             <Link to={`/blog/${post.slug}`}>
                                 <div className="flex flex-wrap items-center gap-4 text-sm text-slate-600 dark:text-slate-400 mb-3">
                                     <div className="flex items-center gap-2">
-                                        <Calendar className="w-4 h-4" />
+                                        <HiCalendar className="w-4 h-4" />
                                         <span>{new Date(post.date).toLocaleDateString(language)}</span>
                                     </div>
                                     <div className="flex items-center gap-2">
-                                        <Clock className="w-4 h-4" />
+                                        <HiClock className="w-4 h-4" />
                                         <span>
                       {post.readTime} {language === 'en' ? 'min read' : 'мин чтения'}
                     </span>
@@ -59,7 +59,7 @@ export function Blog() {
                                             key={tag}
                                             className="inline-flex items-center gap-1 px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full text-sm"
                                         >
-                      <Tag className="w-3 h-3" />
+                      <HiTag className="w-3 h-3" />
                                             {tag}
                     </span>
                                     ))}
