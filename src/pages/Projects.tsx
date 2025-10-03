@@ -1,7 +1,6 @@
 import { Card } from '@/components/ui/Card';
 import { useLanguage } from '@/hooks/useLanguage';
-import { HiExternalLink, HiCalendar } from 'react-icons/hi';
-import { Link } from 'react-router-dom';
+import {  HiCalendar } from 'react-icons/hi';
 import { formatDatePeriod } from '@/utils/dateFormatter';
 
 export function Projects() {
@@ -36,7 +35,7 @@ export function Projects() {
                     ? 'Digital transformation project of the RFU, powered by Soarse platform'
                     : 'Проект цифровой трансформации РФС, разработанный на базе платформы Soarse',
             datePeriod: '2020-09-01 - 2021-06-21',
-            image: '/images/projects/rfs.cover.png',
+            image: '/images/projects/rfs.card.png',
             tags: ['Microservices', 'MDM', 'Low-Code'],
             link: '/projects/rfs',
         },
@@ -48,8 +47,8 @@ export function Projects() {
                     ? 'Next-generation Low-Code platform for business automation, data management, and building corporate information systems'
                     : 'Low-Code платформа нового поколения для автоматизации бизнеса, управления данными и построения корпоративных информационных систем',
             datePeriod: '2020-01-01 - 2023-02-20',
-            image: '/images/projects/soarse.png',
-            tags:['Low-Code', 'Startups', 'BPM', 'MDM', 'Spring Cloud', 'ABAC', 'Microservices', 'Docker', 'React'],
+            image: '/images/projects/soarse.card.png',
+            tags:['Low-Code', 'Startups', 'BPM', 'MDM', 'Spring Cloud', 'ABAC', 'React'],
             link: '/projects/soarse',
         },
         {
@@ -63,44 +62,44 @@ export function Projects() {
                     ? 'Digital platform for monitoring, planning and management of engineering and energy infrastructure of St. Petersburg.'
                     : 'Цифровая платформа для мониторинга, планирования и управления инженерной и энергетической инфраструктурой Санкт-Петербурга.',
             datePeriod: '2017-10-01 - 2020-01-31',
-            image: language === 'en' ? '/images/projects/iek-spb.en.png' : '/images/projects/iek-spb.ru.png',
+            image: '/images/projects/iek-spb.card.png' ,
             tags: language === 'en'
                 ? ['Java', 'Spring', 'PostgreSQL', 'GIS', 'Big Data', 'DevOps', 'Data Governance', 'Energy', 'Analytics', 'B2G']
-                : ['Java', 'Spring', 'PostgreSQL', 'GIS', 'Big Data', 'DevOps', 'Data Governance', 'Инженерная инфраструктура', 'Энергетика', 'ГИС', 'Аналитика', 'Государственные информационные системы'],
+                : ['Java', 'Spring', 'PostgreSQL', 'GIS', 'Big Data', 'DevOps', 'Data Governance', 'Инженерная инфраструктура', 'Энергетика', 'ГИС', 'Аналитика', 'B2G'],
             link: '/projects/iek-spb',
         },
         {
             id: 'apk-bg',
             title:
                 language === 'en'
-                    ? 'Safe City HSS'
+                    ? 'Safe City Sakhalin'
                     : 'АПК БГ',
             description:
                 language === 'en'
                     ? 'An integrated public safety system with video surveillance, analytics, and subsystem integration for the regional level.'
                     : 'Комплексная система общественной безопасности с видеонаблюдением, аналитикой и интеграцией подсистем для регионального уровня.',
             datePeriod: '2017-03-01 - 2017-11-01',
-            image: language === 'en' ? '/images/projects/apk-bg.en.png' : '/images/projects/apk-bg.ru.png',
+            image: '/images/projects/apk-bg.card.png',
             tags: language === 'en'
-                ? ['Java Spring', 'React', 'Postgres', 'Data Engineering', 'Big Data', 'Project Management', 'Requirements Analysis', 'Video Surveillance', 'Integration']
-                : ['Java Spring', 'React', 'Postgres', 'Data Engineering', 'Big Data', 'Проектное управление', 'Анализ требований', 'Видеонаблюдение', 'Интеграция'],
+                ? ['Java Spring', 'React', 'Postgres', 'Project Management', 'Requirements Analysis', 'Video Surveillance', 'Integration']
+                : ['Java Spring', 'React', 'Postgres', 'Проектное управление', 'Анализ требований', 'Видеонаблюдение', 'Интеграция'],
             link: '/projects/apk-bg',
         },
         {
             id: 'as-sioi',
             title:
                 language === 'en'
-                    ? 'AS S&OI'
+                    ? 'AS SIOI'
                     : 'АС СиОИ',
             description:
                 language === 'en'
                     ? 'Comprehensive portal for monitoring Russian energy sector investment programs with reporting integration and analytics'
-                    : 'Комплексный портал для мониторинга инвестиционных программ Энергетики РФ с интеграцией систем отчетности и аналитикой',
+                    : 'Автоматизированная система сбора и обработки отчетности',
             datePeriod: '2013-12-01 - 2017-02-28',
             image: '/images/projects/as-sioi.card.png' ,
             tags: language === 'en'
-                ? ['Java', 'Oracle', 'WebLogic', 'JavaScript', 'UX/UI', 'Analytics', 'Data Engineering']
-                : ['Java', 'Oracle', 'WebLogic', 'JavaScript', 'UX/UI', 'Аналитика', 'Data Engineering'],
+                ? ['Java', 'Oracle', 'SAP BO', 'Analytics', 'Data Engineering']
+                : ['Java', 'Oracle', 'SAP BO', 'Аналитика', 'Data Engineering'],
             link: '/projects/as-sioi',
         },
         {
@@ -114,7 +113,7 @@ export function Projects() {
                     ? 'Comprehensive portal for monitoring Russian energy sector investment programs with reporting integration and analytics'
                     : 'Проект по разработке портала для мониторинга инвестиционных программ в электроэнергетике',
             datePeriod: '2012-01-01 - 2017-02-21',
-            image: language === 'en' ? '/images/projects/portal-mdo.en.png' : '/images/projects/portal-mdo.ru.png',
+            image:  '/images/projects/portal-mdo.card.png',
             tags: language === 'en'
                 ? ['Energy', 'Monitoring', 'B2G']
                 : ['Энергетика', 'Мониторинг', 'B2G'],
@@ -131,28 +130,11 @@ export function Projects() {
                     ? 'Project for developing a portal to monitor investment programs in the energy sector, including video surveillance of construction and analytical reports.'
                     : 'Проект по разработке портала для мониторинга инвестиционных программ в электроэнергетике, включающий видеонаблюдение за строительством и аналитические отчёты.',
             datePeriod: '2011-07-01 - 2012-02-28',
-            image: language === 'en' ? '/images/projects/portal-mip.en.png' : '/images/projects/portal-mip.png',
+            image:  '/images/projects/portal-mip.card.png',
             tags: language === 'en'
                 ? ['Java', 'Oracle', 'WebLogic', 'JavaScript', 'UX/UI', 'requirements analysis', 'project management']
                 : ['Java', 'Oracle', 'WebLogic', 'JavaScript', 'UX/UI', 'анализ требований', 'управление проектом'],
             link: '/projects/portal-mip',
-        },
-        {
-            id: 'bioinformatics',
-            title:
-                language === 'en'
-                    ? 'Bioinformatics'
-                    : 'Курс Биоинформатики',
-            description:
-                language === 'en'
-                    ? 'Academic project in computational biology using Java and Perl for sequence analysis and data processing.'
-                    : 'Учебный проект по вычислительной биологии с анализом последовательностей и базами данных, написанный на Java и Perl.',
-            datePeriod: '2006-09-01 - 2008-05-31',
-            image: '/images/projects/bioinformatics.png',
-            tags: language === 'en'
-                ? ['Java', 'Perl', 'HTML', 'computational biology', 'bioinformatics', 'student project']
-                : ['Java', 'Perl', 'HTML', 'вычислительная биология', 'биоинформатика', 'учебный проект'],
-            link: '/projects/bioinformatics',
         },
     ];
 
@@ -199,13 +181,13 @@ export function Projects() {
                     </span>
                                     ))}
                                 </div>
-                                <Link
+                        {/*        <Link
                                     to={project.link}
                                     className="text-primary-500 hover:text-primary-600 inline-flex items-center gap-2 font-medium"
                                 >
                                     {language === 'en' ? 'View Details' : 'Подробнее'}
                                     <HiExternalLink className="w-4 h-4" />
-                                </Link>
+                                </Link>*/}
                             </div>
                         </Card>
                     ))}
