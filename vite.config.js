@@ -6,6 +6,10 @@ export default defineConfig({
     resolve: {
         alias: {
             '@': '/src',
+            buffer: 'buffer/',
         },
+    },
+    define: {
+        'global': 'globalThis',
     },
 });
