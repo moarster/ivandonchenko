@@ -1,10 +1,13 @@
-import { Card } from '@/components/ui/Card';
-import { useLanguage } from '@/hooks/useLanguage';
-import {  HiCalendar } from 'react-icons/hi';
-import { formatDatePeriod } from '@/utils/dateFormatter';
+// noinspection D
+
+import {Card} from '@/components/ui/Card';
+import {TagList} from '@/components/ui/TagList';
+import {useLanguage} from '@/hooks/useLanguage';
+import {HiCalendar} from 'react-icons/hi';
+import {formatDatePeriod} from '@/utils/dateFormatter';
 
 export function Projects() {
-    const { language } = useLanguage();
+    const {language} = useLanguage();
 
     const projects = [
         {
@@ -18,10 +21,10 @@ export function Projects() {
                     ? 'MDM and metadata component powered by Soarse within the GAS PS Portal of the General Prosecutor\'s Office of the Russian Federation'
                     : 'Подсистема НСИ и метаданных на базе Soarse в составе Портала ГАС ПС Генпрокуратуры РФ',
             datePeriod: '2021-10-15 - 2023-01-31',
-            image:  '/images/projects/gas-ps.card.png',
+            image: '/images/projects/gas-ps.card.png',
             tags: language === 'en'
-                ? [ 'B2G', 'Microservices', 'MDM', 'Metadata', 'Low-Code']
-                : [ 'B2G', 'Microservices', 'MDM', 'Метаданные', 'Low-Code'],
+                ? ['B2G', 'Microservices', 'MDM', 'Metadata', 'Low-Code']
+                : ['B2G', 'Microservices', 'MDM', 'Метаданные', 'Low-Code'],
             link: '/projects/gas-ps',
         },
         {
@@ -48,7 +51,7 @@ export function Projects() {
                     : 'Low-Code платформа нового поколения для автоматизации бизнеса, управления данными и построения корпоративных информационных систем',
             datePeriod: '2020-01-01 - 2023-02-20',
             image: '/images/projects/soarse.card.png',
-            tags:['Low-Code', 'Startups', 'BPM', 'MDM', 'Spring Cloud', 'ABAC', 'React'],
+            tags: ['Low-Code', 'Startups', 'BPM', 'MDM', 'Spring Cloud', 'ABAC', 'React'],
             link: '/projects/soarse',
         },
         {
@@ -62,7 +65,7 @@ export function Projects() {
                     ? 'Digital platform for monitoring, planning and management of engineering and energy infrastructure of St. Petersburg.'
                     : 'Цифровая платформа для мониторинга, планирования и управления инженерной и энергетической инфраструктурой Санкт-Петербурга.',
             datePeriod: '2017-10-01 - 2020-01-31',
-            image: '/images/projects/iek-spb.card.png' ,
+            image: '/images/projects/iek-spb.card.png',
             tags: language === 'en'
                 ? ['Java', 'Spring', 'PostgreSQL', 'GIS', 'Big Data', 'DevOps', 'Data Governance', 'Energy', 'Analytics', 'B2G']
                 : ['Java', 'Spring', 'PostgreSQL', 'GIS', 'Big Data', 'DevOps', 'Data Governance', 'Инженерная инфраструктура', 'Энергетика', 'ГИС', 'Аналитика', 'B2G'],
@@ -96,7 +99,7 @@ export function Projects() {
                     ? 'Comprehensive portal for monitoring Russian energy sector investment programs with reporting integration and analytics'
                     : 'Автоматизированная система сбора и обработки отчетности',
             datePeriod: '2013-12-01 - 2017-02-28',
-            image: '/images/projects/as-sioi.card.png' ,
+            image: '/images/projects/as-sioi.card.png',
             tags: language === 'en'
                 ? ['Java', 'Oracle', 'SAP BO', 'Analytics', 'Data Engineering']
                 : ['Java', 'Oracle', 'SAP BO', 'Аналитика', 'Data Engineering'],
@@ -113,7 +116,7 @@ export function Projects() {
                     ? 'Comprehensive portal for monitoring Russian energy sector investment programs with reporting integration and analytics'
                     : 'Проект по разработке портала для мониторинга инвестиционных программ в электроэнергетике',
             datePeriod: '2012-01-01 - 2017-02-21',
-            image:  '/images/projects/portal-mdo.card.png',
+            image: '/images/projects/portal-mdo.card.png',
             tags: language === 'en'
                 ? ['Energy', 'Monitoring', 'B2G']
                 : ['Энергетика', 'Мониторинг', 'B2G'],
@@ -130,7 +133,7 @@ export function Projects() {
                     ? 'Project for developing a portal to monitor investment programs in the energy sector, including video surveillance of construction and analytical reports.'
                     : 'Проект по разработке портала для мониторинга инвестиционных программ в электроэнергетике, включающий видеонаблюдение за строительством и аналитические отчёты.',
             datePeriod: '2011-07-01 - 2012-02-28',
-            image:  '/images/projects/portal-mip.card.png',
+            image: '/images/projects/portal-mip.card.png',
             tags: language === 'en'
                 ? ['Java', 'Oracle', 'WebLogic', 'JavaScript', 'UX/UI', 'requirements analysis', 'project management']
                 : ['Java', 'Oracle', 'WebLogic', 'JavaScript', 'UX/UI', 'анализ требований', 'управление проектом'],
@@ -163,25 +166,17 @@ export function Projects() {
                                 </div>
                             )}
                             <div className="p-6 flex-1 flex flex-col">
-                                <div className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 mb-2">
-                                    <HiCalendar className="w-4 h-4" />
+                                <div
+                                    className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 mb-2">
+                                    <HiCalendar className="w-4 h-4"/>
                                     <span>{formatDatePeriod(project.datePeriod, language)}</span>
                                 </div>
                                 <h3 className="text-xl font-display font-bold mb-2">{project.title}</h3>
                                 <p className="text-slate-600 dark:text-slate-400 mb-4 flex-1">
                                     {project.description}
                                 </p>
-                                <div className="flex flex-wrap gap-2 mb-4">
-                                    {project.tags.map((tag) => (
-                                        <span
-                                            key={tag}
-                                            className="px-3 py-1 bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300 rounded-full text-sm"
-                                        >
-                      {tag}
-                    </span>
-                                    ))}
-                                </div>
-                        {/*        <Link
+                                <TagList tags={project.tags} className="mb-4" />
+                                {/*        <Link
                                     to={project.link}
                                     className="text-primary-500 hover:text-primary-600 inline-flex items-center gap-2 font-medium"
                                 >
