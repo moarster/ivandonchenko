@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @variant dark (.dark &);
 
@@ -20,22 +20,24 @@
   --color-accent-600: #c026d3;
 
   /* Font families */
-  --font-sans: 'Inter', system-ui, sans-serif;
-  --font-display: 'Brygada 1918', serif;
-  --font-serif: 'Brygada 1918', serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Brygada 1918", serif;
+  --font-serif: "Brygada 1918", serif;
 }
 
 @font-face {
-  font-family: 'Brygada 1918';
-  src: url('/fonts/Brygada1918-Regular.ttf') format('truetype');
+  font-family: "Brygada 1918";
+  /*noinspection CssUnknownTarget*/
+  src: url("/fonts/Brygada1918-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Brygada 1918';
-  src: url('/fonts/Brygada1918-Bold.ttf') format('truetype');
+  font-family: "Brygada 1918";
+  /*noinspection CssUnknownTarget*/
+  src: url("/fonts/Brygada1918-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;

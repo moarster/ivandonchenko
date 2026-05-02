@@ -1,15 +1,20 @@
-# Ivan Donchenko - Personal Site
+# ivandonchenko.ru
 
-![Deploy Status](https://img.shields.io/github/actions/workflow/status/moarster/ivandonchenko/deploy.yml)
+Personal professional website — portfolio, CV, and services.
 
-My personal professional website featuring portfolio, blog, and CV.
+**Stack:** React 19, TypeScript, Vite, TailwindCSS 4, React Router  
+**Deploy:** Docker + nginx, GitHub Actions → Portainer webhook
 
-**Live site:** [ivandonchenko.ru](https://ivandonchenko.ru)
+## Development
 
-## Tech Stack
+```bash
+pnpm install
+pnpm dev
+```
 
-React 19 · TypeScript · Vite · TailwindCSS 4 · React Router
+## Build
 
----
-
-© 2025 Ivan Donchenko
+```bash
+pnpm build
+pnpm preview
+```

@@ -1,10 +1,10 @@
 ![My photo](/images/userpic.jpg)
 
-> Throughout my professional journey, I've worn many hats. Starting as a developer, I progressed to team lead, project manager, and eventually headed an entire department. When my work began lacking creative fulfillment, I returned to my roots — first as a business architect and product owner, then fully immersing myself in code as a systems architect.
+> My career’s been quite a ride. I started out as a developer — just writing code and loving every minute of it. Then I moved up: team lead, project manager, and before I knew it, I was running a whole department. It was exciting, but after a while, I missed the creative side of things. So I went back to my roots: first as a business architect and product owner, and eventually I dove right back into coding as a systems architect.
 
 ## 💰 Professional Experience
 
-Over twelve years in the IT industry, I've acquired diverse skills:
+Twelve years in IT have taught me a lot — I’ve picked up all kinds of skills along the way:
 
 - **Development** in Java, JavaScript, TypeScript (React+Node), Python
 - Designing and administering **databases**: PostgreSQL, Oracle, MongoDB
@@ -41,7 +41,7 @@ I'm skilled in electrical work and plumbing, have participated in house construc
 
 ### Avid Cyclist
 
-To me, a bicycle isn't just sports equipment — it's a versatile means of transportation and an extension of my physical capabilities.
+As for hobbies, I see my bike as more than just sports gear. It’s my go‑to way to get around and a real extension of how I move through the world.
 
 ### Cinephile
 
@@ -53,7 +53,7 @@ I enjoy economic simulators, city-building strategies, and interactive movies, t
 
 ### Passionate Cook
 
-I believe cooking is a creative process, and a man at the stove is a captivating sight.
+And I’ve always thought cooking is a kind of art. There’s something really cool about a man in the kitchen — it’s a sight that never gets old.
 
 ### Frequent Traveler
 

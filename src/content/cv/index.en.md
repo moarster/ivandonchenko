@@ -39,14 +39,14 @@ Implemented Java microservices following Domain-Driven Design and Event-Driven A
 
 ### Galor LLC
 **CEO / CPO** | *July 2020 — January 2023*
-- Led the development and implementation of in-house product [Soarse](/en/projects/soarse)
+- Led the development and implementation of in-house product Soarse
 - Formulated product strategy and managed the full product lifecycle
 - Designed solution architecture, internal algorithms, and APIs
 
 **Key projects:**
-- [State Legal Statistics System](/en/projects/gas-ps) (General Prosecutor's Office of the Russian Federation)
+- State Legal Statistics System (General Prosecutor's Office of the Russian Federation)
 - Wood Accounting and Transaction System (Federal Forestry Agency)
-- [Information System of the Russian Football Union](/en/projects/rfs) (RFU)
+- Information System of the Russian Football Union (RFU)
 
 ### [Bazelevs](https://www.bazelevs.ru)
 **IT Consultant** | *July 2019 — January 2022*
@@ -58,23 +58,23 @@ Designed solution architecture and managed development teams for state informati
 
 **Key projects:**
 - Reporting IS. GIS TEK (PJSC "Lukoil")
-- [St. Petersburg Engineering and Energy Complex](/en/projects/iek-spb) (SPb IAC)
-- [Safe City APC](/en/projects/apk-bg) (Regional Digital Transformation Center - Sakhalin)
+- St. Petersburg Engineering and Energy Complex (SPb IAC)
+- Safe City APC (Regional Digital Transformation Center - Sakhalin)
 
 ### [IT Energy Service](https://www.it-energy.ru)
 **Java Team Lead → Department Head** | *September 2014 — February 2017*
 Led the development and implementation of systems in the energy sector.
 
 **Key projects:**
-- [Information Collection and Processing System](/en/projects/as-sioi) (Technical Inspection of UES)
+- Information Collection and Processing System (Technical Inspection of UES)
 - Electricity Accounting System for Interstate Power Lines (PJSC "Rosseti")
-- [Operational Facilities Monitoring Portal](/en/projects/portal-mdo) (Technical Inspection of UES)
-- [Investment Program Monitoring Portal](/en/projects/portal-mip) (Technical Inspection of UES)
+- Operational Facilities Monitoring Portal (Technical Inspection of UES)
+- Investment Program Monitoring Portal (Technical Inspection of UES)
 
 ## Education
 
 ### Lomonosov Moscow State University
-**[Faculty of Bioengineering and Bioinformatics](/en/projects/bioinformatics)** | *2004 — 2011*
+**[Faculty of Bioengineering and Bioinformatics](https://fbb.msu.ru/)** | *2004 — 2011*
 
 ## Languages
 
@@ -84,24 +84,22 @@ Led the development and implementation of systems in the energy sector.
 
 ## Technology Stack
 
-- Spring Cloud
-- Java
-- Camunda Zeebe
+- Spring Boot/Cloud
+- Java/Kotlin
+- Camunda/Flowable
 - MongoDB
-- ELK
+- Kafka
 - OpenTelemetry
 - Oracle
 - PostgreSQL
-- Redis
 - Docker
 - Kubernetes
 - API Gateway
 - RabbitMQ
-- Apache Jena
 
 ## Professional Profile
 
-Over 10 years of experience in designing, developing, and implementing high-load industrial B2B/B2G WEB applications. Specialized in system architecture of complex distributed applications with microservice architecture.
+Over 15 years of experience in designing, developing, and implementing high-load industrial B2B/B2G WEB applications. Specialized in system architecture of complex distributed applications with microservice architecture.
 
 ### Expertise in system classes:
 - Master Data Management (MDM)

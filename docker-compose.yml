@@ -1,0 +1,13 @@
+services:
+  ivandonchenko:
+    image: ghcr.io/moarster/ivandonchenko:latest
+    container_name: ivandonchenko-site
+    restart: unless-stopped
+    expose:
+      - "3000"
+    networks:
+      - traefik
+
+networks:
+  traefik:
+    external: true

@@ -1,30 +1,19 @@
-# ---------- Stage 1: Build ----------
-FROM node:22-alpine AS builder
+FROM node:22-alpine
 
-RUN corepack enable && corepack prepare pnpm@latest --activate
+RUN corepack enable && corepack prepare pnpm@latest --activate && npm i -g serve
 
 WORKDIR /app
 
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
-
 RUN pnpm install --frozen-lockfile
 
 COPY . .
 
-RUN pnpm run build
+ARG VITE_YANDEX_METRIKA_ID=104351621
+ENV VITE_YANDEX_METRIKA_ID=$VITE_YANDEX_METRIKA_ID
 
+RUN pnpm run build && rm -rf node_modules src
 
-# ---------- Stage 2: Production ----------
-FROM nginx:stable-alpine AS production
+EXPOSE 3000
 
-ENV NODE_ENV=production
-
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-
-COPY --from=builder /app/dist /usr/share/nginx/html
-
-EXPOSE 80
-
-CMD ["nginx", "-g", "daemon off;"]
-
-
+CMD ["serve", "-s", "dist", "-l", "3000"]
