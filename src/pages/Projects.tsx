@@ -17,7 +17,7 @@ export function Projects() {
           ? "MDM and metadata component within the GAS PS Portal of the General Prosecutor's Office"
           : "Подсистема НСИ и метаданных в составе Портала ГАС ПС Генпрокуратуры РФ",
       datePeriod: "2021-10-15 - 2023-01-31",
-      image: "/images/projects/gas-ps.card.png",
+      image: "/images/projects/gas-ps.card.webp",
       tags: ["B2G", "Microservices", "MDM", "Low-Code"],
     },
     {
@@ -28,7 +28,7 @@ export function Projects() {
           ? "Digital transformation of the Russian Football Union"
           : "Цифровая трансформация Российского футбольного союза",
       datePeriod: "2020-09-01 - 2021-06-21",
-      image: "/images/projects/rfs.card.png",
+      image: "/images/projects/rfs.card.webp",
       tags: ["Microservices", "MDM", "Low-Code"],
     },
     {
@@ -39,7 +39,7 @@ export function Projects() {
           ? "Low-Code platform for business automation and corporate information systems"
           : "Low-Code платформа для автоматизации бизнеса и корпоративных информационных систем",
       datePeriod: "2020-01-01 - 2023-02-20",
-      image: "/images/projects/soarse.card.png",
+      image: "/images/projects/soarse.card.webp",
       tags: ["Low-Code", "BPM", "MDM", "Spring Cloud", "React"],
     },
     {
@@ -50,7 +50,7 @@ export function Projects() {
           ? "Digital platform for engineering and energy infrastructure of St. Petersburg"
           : "Инженерно-энергетический комплекс Санкт-Петербурга",
       datePeriod: "2017-10-01 - 2020-01-31",
-      image: "/images/projects/iek-spb.card.png",
+      image: "/images/projects/iek-spb.card.webp",
       tags: ["Java", "Spring", "PostgreSQL", "GIS", "B2G"],
     },
     {
@@ -61,7 +61,7 @@ export function Projects() {
           ? "Regional public safety system with video surveillance and analytics"
           : 'Аппаратно-программный комплекс "Безопасный Город" Сахалинская область',
       datePeriod: "2017-03-01 - 2017-11-01",
-      image: "/images/projects/apk-bg.card.png",
+      image: "/images/projects/apk-bg.card.webp",
       tags: ["Java Spring", "React", "PostgreSQL", "B2G"],
     },
     {
@@ -72,7 +72,7 @@ export function Projects() {
           ? "Reporting and analytics system for Russian energy sector investments"
           : "Система сбора и обработки отчетности в электроэнергетике",
       datePeriod: "2013-12-01 - 2017-02-28",
-      image: "/images/projects/as-sioi.card.png",
+      image: "/images/projects/as-sioi.card.webp",
       tags: ["Java", "Oracle", "SAP BO", "Data Engineering"],
     },
     {
@@ -83,7 +83,7 @@ export function Projects() {
           ? "Portal for monitoring investment programs in the energy sector"
           : "Портал мониторинга действующих объектов электроэнергетике",
       datePeriod: "2012-01-01 - 2017-02-21",
-      image: "/images/projects/portal-mdo.card.png",
+      image: "/images/projects/portal-mdo.card.webp",
       tags:
         language === "en"
           ? ["Energy", "Monitoring", "B2G"]
@@ -97,7 +97,7 @@ export function Projects() {
           ? "Portal for energy sector investment monitoring with video surveillance"
           : "Портал мониторинга инвестиционных программ в электроэнергетике",
       datePeriod: "2011-07-01 - 2012-02-28",
-      image: "/images/projects/portal-mip.card.png",
+      image: "/images/projects/portal-mip.card.webp",
       tags: ["Java", "Oracle", "WebLogic", "JavaScript"],
     },
   ];
@@ -138,6 +138,8 @@ export function Projects() {
                   <img
                     src={project.image}
                     alt={project.title}
+                    width={461}
+                    height={308}
                     className="w-full h-full object-cover"
                   />
                 </div>
