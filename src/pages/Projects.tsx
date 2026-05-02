@@ -59,7 +59,7 @@ export function Projects() {
       description:
         language === "en"
           ? "Regional public safety system with video surveillance and analytics"
-          : "Аппаратно-программный комплекс \"Безопасный Город\" Сахалинская область",
+          : 'Аппаратно-программный комплекс "Безопасный Город" Сахалинская область',
       datePeriod: "2017-03-01 - 2017-11-01",
       image: "/images/projects/apk-bg.card.png",
       tags: ["Java Spring", "React", "PostgreSQL", "B2G"],
