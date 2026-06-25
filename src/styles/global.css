@@ -19,6 +19,18 @@
   --color-accent-500: #d946ef;
   --color-accent-600: #c026d3;
 
+  /* Secondary accent (Cinnabar) colors */
+  --color-cinnabar-50: #fdf3f2;
+  --color-cinnabar-100: #fbe0dc;
+  --color-cinnabar-200: #f6bdb5;
+  --color-cinnabar-300: #ef9385;
+  --color-cinnabar-400: #e96655;
+  --color-cinnabar-500: #e34234;
+  --color-cinnabar-600: #c73327;
+  --color-cinnabar-700: #a52a20;
+  --color-cinnabar-800: #88251d;
+  --color-cinnabar-900: #71241e;
+
   /* Font families */
   --font-sans: "Inter", system-ui, sans-serif;
   --font-display: "Brygada 1918", serif;

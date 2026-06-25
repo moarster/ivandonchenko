@@ -8,7 +8,7 @@ export function NotFound() {
 
   return (
     <div className="container mx-auto px-4 py-20 text-center">
-      <h1 className="text-9xl font-display font-bold text-primary-500 mb-4">
+      <h1 className="text-9xl font-display font-bold text-cinnabar-500 dark:text-cinnabar-400 mb-4">
         404
       </h1>
       <h2 className="text-3xl font-bold mb-4">

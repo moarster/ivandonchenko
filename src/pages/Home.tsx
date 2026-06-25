@@ -59,6 +59,7 @@ export function Home() {
             ? "Lead Software Architect"
             : "Ведущий архитектор ПО"}
         </h1>
+        <div className="mx-auto mb-6 h-1 w-20 rounded-full bg-cinnabar-500 dark:bg-cinnabar-400" />
         <p className="text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-2xl mx-auto">
           {language === "en"
             ? "Designing scalable systems and leading digital transformation projects"

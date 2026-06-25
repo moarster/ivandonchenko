@@ -192,7 +192,9 @@ export function Services() {
                     key={item}
                     className="flex items-start gap-2 text-sm text-slate-700 dark:text-slate-300"
                   >
-                    <span className="text-primary-500 mt-0.5">&#10003;</span>
+                    <span className="text-cinnabar-500 dark:text-cinnabar-400 mt-0.5">
+                      &#10003;
+                    </span>
                     {item}
                   </li>
                 ))}
