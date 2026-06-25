@@ -1,6 +1,6 @@
 # ivandonchenko.ru
 
-Personal professional website — portfolio, CV, and services.
+Personal professional website — portfolio, CV, and blog.
 
 **Stack:** React 19, TypeScript, Vite, TailwindCSS 4, React Router  
 **Deploy:** Docker + nginx, GitHub Actions → Portainer webhook

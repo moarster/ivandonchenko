@@ -1,7 +1,5 @@
 # CLAUDE.md
 
-This codebase was initially generated and later refactored with Claude (Anthropic).
-
 ## Project overview
 
 Personal professional website for Ivan Donchenko (ivandonchenko.ru).  

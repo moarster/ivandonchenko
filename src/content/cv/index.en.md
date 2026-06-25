@@ -1,7 +1,7 @@
 ---
 title: "Software Architect"
 date: 2025-04-21
-description: "Experienced System Architect with expertise in designing high-load industrial systems"
+description: "Experienced System Architect with expertise in designing complex industrial systems"
 tags: ["resume", "system architect", "java", "microservices"]
 ---
 
@@ -33,7 +33,7 @@ Designed WEB applications from scratch using:
 - REST API and gRPC for communications
 - Spring Cloud for building fault-tolerant systems
 - Documentation in C4 and Arc42 standards
-- Containerization (Docker, Kubernetes)
+- Containerization (Docker)
 
 Implemented Java microservices following Domain-Driven Design and Event-Driven Architecture principles.
 
@@ -93,13 +93,12 @@ Led the development and implementation of systems in the energy sector.
 - Oracle
 - PostgreSQL
 - Docker
-- Kubernetes
 - API Gateway
 - RabbitMQ
 
 ## Professional Profile
 
-Over 15 years of experience in designing, developing, and implementing high-load industrial B2B/B2G WEB applications. Specialized in system architecture of complex distributed applications with microservice architecture.
+Over 15 years of experience in designing, developing, and implementing industrial B2B/B2G WEB applications. Specialized in system architecture of complex distributed applications with microservice architecture.
 
 ### Expertise in system classes:
 - Master Data Management (MDM)

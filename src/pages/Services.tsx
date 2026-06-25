@@ -33,14 +33,7 @@ const services = {
       subtitle: "Development, Refactoring & Modernization",
       description:
         "Full-cycle backend development on Java/Kotlin with Spring ecosystem. From greenfield projects to modernization of legacy systems, performance optimization, and migration to newer platform versions.",
-      tags: [
-        "Java",
-        "Kotlin",
-        "Spring Boot/Cloud",
-        "PostgreSQL",
-        "Docker",
-        "K8s",
-      ],
+      tags: ["Java", "Kotlin", "Spring Boot/Cloud", "PostgreSQL", "Docker"],
       highlights: [
         "Spring Boot/Cloud microservices",
         "REST API & OpenAPI design",
@@ -108,14 +101,7 @@ const services = {
       subtitle: "Разработка, рефакторинг, модернизация",
       description:
         "Полный цикл backend-разработки на Java/Kotlin со стеком Spring. От новых проектов до модернизации legacy-систем, оптимизации производительности и миграции на актуальные версии.",
-      tags: [
-        "Java",
-        "Kotlin",
-        "Spring Boot/Cloud",
-        "PostgreSQL",
-        "Docker",
-        "K8s",
-      ],
+      tags: ["Java", "Kotlin", "Spring Boot/Cloud", "PostgreSQL", "Docker"],
       highlights: [
         "Микросервисы на Spring Boot/Cloud",
         "Проектирование REST API и OpenAPI",
