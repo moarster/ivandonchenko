@@ -6,7 +6,7 @@ import { HiArrowRight, HiBriefcase, HiCode, HiCog } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
 export function Home() {
-  const { language, t } = useLanguage();
+  const { language, t, localePath } = useLanguage();
 
   const features = [
     {
@@ -67,13 +67,13 @@ export function Home() {
         </p>
         <div className="flex gap-4 justify-center flex-wrap">
           <Button size="lg" asChild>
-            <Link to="/contact">
+            <Link to={localePath("/contact")}>
               {language === "en" ? "Get in Touch" : "Связаться"}
               <HiArrowRight className="ml-2 w-5 h-5" />
             </Link>
           </Button>
           <Button size="lg" variant="secondary" asChild>
-            <Link to="/projects">
+            <Link to={localePath("/projects")}>
               {language === "en" ? "View Projects" : "Мои проекты"}
             </Link>
           </Button>
@@ -92,7 +92,7 @@ export function Home() {
               {feature.description}
             </p>
             <Link
-              to={feature.link}
+              to={localePath(feature.link)}
               className="text-primary-500 hover:text-primary-600 inline-flex items-center gap-2"
             >
               {t("readMore")}
@@ -113,7 +113,7 @@ export function Home() {
             : "Давайте обсудим, как я могу помочь вашему проекту"}
         </p>
         <Button size="lg" variant="secondary" asChild>
-          <Link to="/contact">
+          <Link to={localePath("/contact")}>
             {language === "en" ? "Contact Me" : "Написать мне"}
           </Link>
         </Button>

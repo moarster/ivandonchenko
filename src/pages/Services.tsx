@@ -146,7 +146,7 @@ const services = {
 };
 
 export function Services() {
-  const { language } = useLanguage();
+  const { language, localePath } = useLanguage();
   const currentServices = services[language];
 
   return (
@@ -216,7 +216,7 @@ export function Services() {
                 : "Давайте обсудим задачу — подскажу оптимальный подход и оценю сроки"}
             </p>
             <Button variant="secondary" size="lg" asChild>
-              <Link to="/contact">
+              <Link to={localePath("/contact")}>
                 {language === "en" ? "Get in Touch" : "Связаться"}
                 <HiArrowRight className="ml-2 w-5 h-5" />
               </Link>

@@ -8,7 +8,7 @@ import { HiCalendar, HiClock } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
 export function Blog() {
-  const { language, t } = useLanguage();
+  const { language, t, localePath } = useLanguage();
   const posts = getBlogPosts(language);
 
   return (
@@ -31,7 +31,7 @@ export function Blog() {
           <div className="space-y-8">
             {posts.map((post) => (
               <Card key={post.slug} hover className="p-6">
-                <Link to={`/blog/${post.slug}`} className="block">
+                <Link to={localePath(`/blog/${post.slug}`)} className="block">
                   <div className="flex flex-wrap items-center gap-4 text-sm text-slate-600 dark:text-slate-400 mb-3">
                     <span className="flex items-center gap-2">
                       <HiCalendar className="w-4 h-4" />

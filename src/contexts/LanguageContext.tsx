@@ -1,4 +1,5 @@
-import { createContext, useState } from "react";
+import { createContext } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 type Language = "en" | "ru";
 
@@ -6,6 +7,7 @@ interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
   t: (key: string) => string;
+  localePath: (path: string) => string;
 }
 
 const translations: Record<Language, Record<string, string>> = {
@@ -55,17 +57,32 @@ export const LanguageContext = createContext<LanguageContextType>({
   language: "ru",
   setLanguage: () => {},
   t: (key: string) => key,
+  localePath: (path: string) => path,
 });
 
-export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguage] = useState<Language>(() => {
-    const stored = localStorage.getItem("language") as Language;
-    return stored || "ru";
-  });
+const isEnglishPath = (pathname: string) =>
+  pathname === "/en" || pathname.startsWith("/en/");
 
-  const handleSetLanguage = (lang: Language) => {
-    setLanguage(lang);
-    localStorage.setItem("language", lang);
+const stripLocale = (pathname: string) =>
+  pathname.replace(/^\/en(?=\/|$)/, "") || "/";
+
+export function LanguageProvider({ children }: { children: React.ReactNode }) {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const language: Language = isEnglishPath(location.pathname) ? "en" : "ru";
+
+  const localePath = (path: string): string => {
+    if (language !== "en") return path;
+    return path === "/" ? "/en" : `/en${path}`;
+  };
+
+  const setLanguage = (lang: Language) => {
+    if (lang === language) return;
+    const basePath = stripLocale(location.pathname);
+    const target =
+      lang === "en" ? (basePath === "/" ? "/en" : `/en${basePath}`) : basePath;
+    navigate(`${target}${location.search}${location.hash}`);
   };
 
   const t = (key: string): string => {
@@ -73,9 +90,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <LanguageContext.Provider
-      value={{ language, setLanguage: handleSetLanguage, t }}
-    >
+    <LanguageContext.Provider value={{ language, setLanguage, t, localePath }}>
       {children}
     </LanguageContext.Provider>
   );

@@ -4,7 +4,7 @@ import { HiHome } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
 export function NotFound() {
-  const { language } = useLanguage();
+  const { language, localePath } = useLanguage();
 
   return (
     <div className="container mx-auto px-4 py-20 text-center">
@@ -20,7 +20,7 @@ export function NotFound() {
           : "Страница, которую вы ищете, не существует или была перемещена."}
       </p>
       <Button size="lg" asChild>
-        <Link to="/">
+        <Link to={localePath("/")}>
           <HiHome className="w-5 h-5 mr-2" />
           {language === "en" ? "Go Home" : "На главную"}
         </Link>

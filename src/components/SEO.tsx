@@ -15,10 +15,18 @@ export function SEO({
   type = "website",
 }: SEOProps) {
   const location = useLocation();
-  const url = `https://ivandonchenko.ru${location.pathname}`;
 
   useEffect(() => {
     document.title = title;
+
+    const base = "https://ivandonchenko.ru";
+    const path = location.pathname;
+    const isEn = path === "/en" || path.startsWith("/en/");
+    const ruPath = isEn ? path.replace(/^\/en(?=\/|$)/, "") || "/" : path;
+    const enPath = ruPath === "/" ? "/en" : `/en${ruPath}`;
+    const url = `${base}${path}`;
+
+    document.documentElement.lang = isEn ? "en" : "ru";
 
     const metaTags = [
       { name: "description", content: description },
@@ -27,6 +35,7 @@ export function SEO({
       { property: "og:image", content: image },
       { property: "og:url", content: url },
       { property: "og:type", content: type },
+      { property: "og:locale", content: isEn ? "en_US" : "ru_RU" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: title },
       { name: "twitter:description", content: description },
@@ -48,7 +57,30 @@ export function SEO({
 
       element.setAttribute("content", content);
     }
-  }, [title, description, image, url, type]);
+
+    const linkTags = [
+      { rel: "canonical", hreflang: null, href: url },
+      { rel: "alternate", hreflang: "ru", href: `${base}${ruPath}` },
+      { rel: "alternate", hreflang: "en", href: `${base}${enPath}` },
+      { rel: "alternate", hreflang: "x-default", href: `${base}${ruPath}` },
+    ];
+
+    for (const { rel, hreflang, href } of linkTags) {
+      const selector = hreflang
+        ? `link[rel="${rel}"][hreflang="${hreflang}"]`
+        : `link[rel="${rel}"]`;
+      let element = document.querySelector(selector);
+
+      if (!element) {
+        element = document.createElement("link");
+        element.setAttribute("rel", rel);
+        if (hreflang) element.setAttribute("hreflang", hreflang);
+        document.head.appendChild(element);
+      }
+
+      element.setAttribute("href", href);
+    }
+  }, [title, description, image, type, location.pathname]);
 
   return null;
 }

@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { language, setLanguage, t } = useLanguage();
+  const { language, setLanguage, t, localePath } = useLanguage();
 
   const navItems = [
     { path: "/", label: t("home") },
@@ -24,7 +24,7 @@ export function Header() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link
-            to="/"
+            to={localePath("/")}
             className="text-2xl font-display font-bold text-primary-500 hover:text-primary-600 transition-colors"
           >
             Ivan Donchenko
@@ -35,7 +35,7 @@ export function Header() {
             {navItems.map((item) => (
               <Link
                 key={item.path}
-                to={item.path}
+                to={localePath(item.path)}
                 className="text-slate-700 dark:text-slate-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
               >
                 {item.label}
@@ -71,7 +71,7 @@ export function Header() {
             {navItems.map((item) => (
               <Link
                 key={item.path}
-                to={item.path}
+                to={localePath(item.path)}
                 className="py-2 text-slate-700 dark:text-slate-300 hover:text-primary-500 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >

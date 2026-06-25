@@ -15,29 +15,38 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const YANDEX_METRIKA_ID = Number(import.meta.env.VITE_YANDEX_METRIKA_ID) || 0;
 
+const pageRoutes = (
+  <>
+    <Route index element={<Home />} />
+    <Route path="about" element={<About />} />
+    <Route path="cv" element={<CV />} />
+    <Route path="projects" element={<Projects />} />
+    <Route path="services" element={<Services />} />
+    <Route path="blog" element={<Blog />} />
+    <Route path="blog/:slug" element={<BlogPost />} />
+    <Route path="contact" element={<Contact />} />
+    <Route path="*" element={<NotFound />} />
+  </>
+);
+
 export function App() {
   return (
     <ThemeProvider>
-      <LanguageProvider>
-        <BrowserRouter>
+      <BrowserRouter>
+        <LanguageProvider>
           {YANDEX_METRIKA_ID > 0 && (
             <YandexMetrika counterId={YANDEX_METRIKA_ID} />
           )}
           <Routes>
             <Route path="/" element={<Layout />}>
-              <Route index element={<Home />} />
-              <Route path="about" element={<About />} />
-              <Route path="cv" element={<CV />} />
-              <Route path="projects" element={<Projects />} />
-              <Route path="services" element={<Services />} />
-              <Route path="blog" element={<Blog />} />
-              <Route path="blog/:slug" element={<BlogPost />} />
-              <Route path="contact" element={<Contact />} />
-              <Route path="*" element={<NotFound />} />
+              {pageRoutes}
+            </Route>
+            <Route path="/en" element={<Layout />}>
+              {pageRoutes}
             </Route>
           </Routes>
-        </BrowserRouter>
-      </LanguageProvider>
+        </LanguageProvider>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }

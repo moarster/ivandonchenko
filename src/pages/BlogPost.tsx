@@ -9,13 +9,13 @@ import { HiArrowLeft, HiCalendar, HiClock } from "react-icons/hi";
 import { Link, useParams } from "react-router-dom";
 
 export function BlogPost() {
-  const { language, t } = useLanguage();
+  const { language, t, localePath } = useLanguage();
   const { slug } = useParams<{ slug: string }>();
   const post = slug ? getBlogPost(slug, language) : null;
 
   const backButton = (
     <Button variant="ghost" asChild className="mb-8">
-      <Link to="/blog">
+      <Link to={localePath("/blog")}>
         <HiArrowLeft className="w-4 h-4 mr-2" />
         {t("backToBlog")}
       </Link>
