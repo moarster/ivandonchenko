@@ -8,8 +8,40 @@ tags: ["resume", "system architect", "java", "microservices"]
 
 ## Professional Experience
 
+### Freelance
+**System Architect / Tech Lead** | *October 2025 — Present*
+
+> Three independent projects across different domains: BPM development for fintech, an enterprise data warehouse, and AI automation of support processes.
+
+#### Leading BPM development of a credit origination pipeline based on Flowable
+
+- Designing the application architecture from scratch around Flowable 8 in Kotlin; performed a preliminary major engine upgrade from Flowable 6.7 and a full codebase refactoring to the new API
+- Full observability stack; API-first approach
+- Introducing a culture of architecture documentation (Structurizr, C4 model, ADR)
+- Introducing code quality control tools (ktlint, detekt)
+- Building a large-scale system testing platform based on **Spring Boot Test** and **Testcontainers** (contract, service, e2e, and infrastructure tests)
+- Low-code architecture (UI descriptors, universal delegates)
+- GitLab CI/CD (static checks, automated deployment, documentation synchronization)
+- Developing a methodology for estimating actual labor costs and assessing developers using neural networks
+
+#### Enterprise Data Warehouse (Data Lake), BI, and ETL
+
+- Designing and building an enterprise data lake with ETL pipelines
+- Integrating sources: Bitrix, PlanFact, CallTouch, 1C
+- Pipeline orchestration: n8n, Apache Airflow; storage in PostgreSQL
+- BI and visualization: Grafana, Metabase
+
+#### AI automation of first-line support for a major international accommodation booking service
+
+- Setting up and configuring Camunda 8 (Zeebe)
+- Multi-level BPMN processes for handling incoming requests (tickets) with LLM agents
+- Developing low-code tooling (Camunda Element Templates)
+- Orchestrating and developing worker microservices (Java/Python) and Camunda Connectors
+- Building the observability layer
+- Documenting corporate BPMN standards
+
 ### [Solvo](https://www.solvo.ru)
-**System Architect** | *April 2024 — Present*
+**System Architect** | *April 2024 — September 2025*
 
 Leading a full-scale technological transformation of the company's product line:
 - Implementing modern DevOps practices and organizing continuous integration/delivery (CI/CD)
