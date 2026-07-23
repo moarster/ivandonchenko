@@ -1,5 +1,5 @@
-import { useTheme } from "@/hooks/useTheme";
 import { HiMoon, HiSun } from "react-icons/hi";
+import { useTheme } from "@/hooks/useTheme";
 import { Button } from "./Button";
 
 export function ThemeToggle() {

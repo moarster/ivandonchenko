@@ -1,8 +1,3 @@
-import { SEO } from "@/components/SEO";
-import { Button } from "@/components/ui/Button";
-import { Card } from "@/components/ui/Card";
-import { TagList } from "@/components/ui/TagList.tsx";
-import { useLanguage } from "@/hooks/useLanguage";
 import {
   HiAcademicCap,
   HiBriefcase,
@@ -10,6 +5,11 @@ import {
   HiDatabase,
   HiUsers,
 } from "react-icons/hi";
+import { SEO } from "@/components/SEO";
+import { Button } from "@/components/ui/Button";
+import { Card } from "@/components/ui/Card";
+import { TagList } from "@/components/ui/TagList.tsx";
+import { useLanguage } from "@/hooks/useLanguage";
 
 const HHIcon = () => (
   <svg

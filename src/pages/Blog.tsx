@@ -1,11 +1,11 @@
+import { HiCalendar, HiClock } from "react-icons/hi";
+import { Link } from "react-router-dom";
 import { SEO } from "@/components/SEO";
 import { Card } from "@/components/ui/Card";
 import { TagList } from "@/components/ui/TagList";
 import { useLanguage } from "@/hooks/useLanguage";
 import { getBlogPosts } from "@/utils/blog";
 import { formatDate } from "@/utils/dateFormatter";
-import { HiCalendar, HiClock } from "react-icons/hi";
-import { Link } from "react-router-dom";
 
 export function Blog() {
   const { language, t, localePath } = useLanguage();

@@ -1,9 +1,9 @@
+import { HiArrowRight, HiBriefcase, HiCode, HiCog } from "react-icons/hi";
+import { Link } from "react-router-dom";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { useLanguage } from "@/hooks/useLanguage";
-import { HiArrowRight, HiBriefcase, HiCode, HiCog } from "react-icons/hi";
-import { Link } from "react-router-dom";
 
 export function Home() {
   const { language, t, localePath } = useLanguage();

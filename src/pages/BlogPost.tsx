@@ -1,3 +1,5 @@
+import { HiArrowLeft, HiCalendar, HiClock } from "react-icons/hi";
+import { Link, useParams } from "react-router-dom";
 import { MarkdownRenderer } from "@/components/MarkdownRenderer";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/Button";
@@ -5,8 +7,6 @@ import { TagList } from "@/components/ui/TagList";
 import { useLanguage } from "@/hooks/useLanguage";
 import { getBlogPost } from "@/utils/blog";
 import { formatDate } from "@/utils/dateFormatter";
-import { HiArrowLeft, HiCalendar, HiClock } from "react-icons/hi";
-import { Link, useParams } from "react-router-dom";
 
 export function BlogPost() {
   const { language, t, localePath } = useLanguage();

@@ -14,6 +14,7 @@ You can contact me through any of the following channels:
 - **LinkedIn**: [linkedin.com/in/ivandonchenko](https://linkedin.com/in/ivandonchenko)
 - **Facebook**: [facebook.com/IvanDonchenko](https://facebook.com/IvanDonchenko)
 - **Habr Career**: [career.habr.com/moares](https://career.habr.com/moares)
+- **Habr**: [habr.com/ru/users/IvanDonchenko](https://habr.com/ru/users/IvanDonchenko/)
 - **HeadHunter**: [hh.ru/resume/2dff6faeff0cde804d0039ed1f4b3074475038](https://spb.hh.ru/resume/2dff6faeff0cde804d0039ed1f4b3074475038)
 - **Telegram**: [@moarse](https://t.me/moarse)
 

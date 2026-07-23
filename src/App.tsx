@@ -1,17 +1,17 @@
-import { YandexMetrika } from "@/components/YandexMetrika";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
+import { YandexMetrika } from "@/components/YandexMetrika";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import { About } from "@/pages/About";
 import { Blog } from "@/pages/Blog";
 import { BlogPost } from "@/pages/BlogPost";
-import { CV } from "@/pages/CV";
 import { Contact } from "@/pages/Contact";
+import { CV } from "@/pages/CV";
 import { Home } from "@/pages/Home";
 import { NotFound } from "@/pages/NotFound";
 import { Projects } from "@/pages/Projects";
 import { Services } from "@/pages/Services";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const YANDEX_METRIKA_ID = Number(import.meta.env.VITE_YANDEX_METRIKA_ID) || 0;
 

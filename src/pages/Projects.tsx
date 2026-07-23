@@ -1,9 +1,9 @@
+import { HiCalendar } from "react-icons/hi";
 import { SEO } from "@/components/SEO";
 import { Card } from "@/components/ui/Card";
 import { TagList } from "@/components/ui/TagList";
 import { useLanguage } from "@/hooks/useLanguage";
 import { formatDatePeriod } from "@/utils/dateFormatter";
-import { HiCalendar } from "react-icons/hi";
 
 export function Projects() {
   const { language } = useLanguage();

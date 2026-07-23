@@ -1,7 +1,7 @@
-import { Button } from "@/components/ui/Button";
-import { useLanguage } from "@/hooks/useLanguage";
 import { HiHome } from "react-icons/hi";
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/Button";
+import { useLanguage } from "@/hooks/useLanguage";
 
 export function NotFound() {
   const { language, localePath } = useLanguage();

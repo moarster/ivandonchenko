@@ -13,6 +13,7 @@ description: "Способы связаться со мной"
 - **LinkedIn**: [linkedin.com/in/ivandonchenko](https://linkedin.com/in/ivandonchenko)
 - **Facebook**: [facebook.com/IvanDonchenko](https://facebook.com/IvanDonchenko)
 - **Habr Карьера**: [career.habr.com/moares](https://career.habr.com/moares)
+- **Хабр**: [habr.com/ru/users/IvanDonchenko](https://habr.com/ru/users/IvanDonchenko/)
 - **HeadHunter**: [hh.ru/resume/2dff6faeff0cde804d0039ed1f4b3074475038](https://spb.hh.ru/resume/2dff6faeff0cde804d0039ed1f4b3074475038)
 - **Telegram**: [@moarse](https://t.me/moarse)
 
