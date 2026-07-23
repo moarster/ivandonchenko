@@ -18,8 +18,8 @@ export function About() {
         }
         description={
           language === "en"
-            ? "Background, education, and interests of Ivan Donchenko — software architect from Saint Petersburg."
-            : "Опыт, образование и интересы Ивана Донченко — архитектора ПО из Санкт-Петербурга."
+            ? "Background, education, and interests of Ivan Donchenko — business architect and analyst from Saint Petersburg."
+            : "Опыт, образование и интересы Ивана Донченко — бизнес-архитектора и аналитика из Санкт-Петербурга."
         }
       />
       <MarkdownRenderer content={content} />

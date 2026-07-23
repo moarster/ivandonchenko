@@ -1,10 +1,10 @@
 ![My photo](/images/userpic.jpg)
 
-> My career’s been quite a ride. I started out as a developer — just writing code and loving every minute of it. Then I moved up: team lead, project manager, and before I knew it, I was running a whole department. It was exciting, but after a while, I missed the creative side of things. So I went back to my roots: first as a business architect and product owner, and eventually I dove right back into coding as a systems architect.
+> My career is a spiral: developer → team lead → project manager → head of division → CEO of my own startup → business architect. Every loop stayed with me: I analyze like a business analyst, design like an architect, weigh risks like a project manager, and count the economics like the CEO I once was. That’s why I don’t need a chain of translators between business and code — I am that translator.
 
 ## 💰 Professional Experience
 
-Twelve years in IT have taught me a lot — I’ve picked up all kinds of skills along the way:
+Fifteen years in IT have taught me a lot — I’ve picked up all kinds of skills along the way:
 
 - **Development** in Java, JavaScript, TypeScript (React+Node), Python
 - Designing and administering **databases**: PostgreSQL, Oracle, MongoDB
@@ -14,11 +14,12 @@ Twelve years in IT have taught me a lot — I’ve picked up all kinds of skills
 - Creating user **interfaces** and prototypes
 - Designing software **architecture**
 
+My interest in machine learning and extracting meaning from messy data goes back to my bioinformatics studies at Moscow State University. Today it’s daily practice: LLMs are built into my own workflow and into the systems I design for clients — from AI agents inside business processes to a methodology for assessing developer effort. AI has brought speed and excitement back into engineering, but quality is still guaranteed by engineering practices, not prompts: documentation, testing, observability.
+
 ## 🧬 Education
 
 From 2004 to 2011, I studied at the Faculty of Bioengineering and Bioinformatics at Lomonosov Moscow State University. While I didn't complete my degree due to personal circumstances, I finished all academic requirements through the 5th year.  
-At university, I mastered Java, Perl, SQL, improved my English, gained scientific research experience, and developed expertise in data processing algorithms, machine learning, and neural networks.  
-I maintain a strong interest in text analysis, pattern recognition, and extracting meaning from complex data.
+At university, I mastered Java, Perl, SQL, improved my English, gained scientific research experience, and developed expertise in data processing algorithms, machine learning, and neural networks.
 
 ## 📖 Areas of Interest
 
@@ -54,7 +55,3 @@ I enjoy economic simulators, city-building strategies, and interactive movies, t
 ### Passionate Cook
 
 And I’ve always thought cooking is a kind of art. There’s something really cool about a man in the kitchen — it’s a sight that never gets old.
-
-### Frequent Traveler
-
-Before the pandemic, I traveled regularly, visiting Europe and America at least four times a year.

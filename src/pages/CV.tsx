@@ -3,6 +3,7 @@ import {
   HiBriefcase,
   HiCode,
   HiDatabase,
+  HiSparkles,
   HiUsers,
 } from "react-icons/hi";
 import { SEO } from "@/components/SEO";
@@ -37,14 +38,52 @@ const HHIcon = () => (
 export function CV() {
   const { language } = useLanguage();
 
+  const profile = {
+    en: {
+      text: "15 years in IT: I turn business needs into industrial B2B/B2G systems — from process analysis and design to architecture and production delivery. From developer to division head to CEO of my own product startup; still hands-on — I design and write code personally, including LLM-assisted. Focus: business & systems architecture, process automation (Camunda/Flowable), embedding AI into business processes, data and integrations.",
+      formula:
+        "15 years of development (Java/Kotlin) · 7 years of architecture · 5 years of Camunda in production · English C1",
+      domainsTitle: "Expertise Across System Classes",
+      domains: [
+        "BPM",
+        "MDM",
+        "GIS",
+        "ECM",
+        "WMS/YMS",
+        "Analytics & BI",
+        "Low/No-code",
+      ],
+    },
+    ru: {
+      text: "15 лет в IT: перевожу задачи бизнеса в промышленные B2B/B2G-системы — от анализа и проектирования процессов до архитектуры и приёмки в эксплуатацию. Прошёл путь от разработчика до руководителя направления и CEO собственного продуктового стартапа; остаюсь hands-on — проектирую и пишу код лично, в том числе в связке с LLM. Специализация: бизнес- и системная архитектура, автоматизация процессов (Camunda/Flowable), интеграция AI в бизнес-процессы, данные и интеграции.",
+      formula:
+        "15 лет разработки (Java/Kotlin) · 7 лет архитектуры · 5 лет Camunda в production · английский C1",
+      domainsTitle: "Экспертиза в классах систем",
+      domains: [
+        "BPM",
+        "MDM",
+        "GIS",
+        "ECM",
+        "WMS/YMS",
+        "Аналитика и BI",
+        "Low/No-code",
+      ],
+    },
+  };
+
   const skills = {
     en: {
       title: "Skills & Expertise",
       items: [
         {
+          icon: <HiSparkles />,
+          title: "AI Practice",
+          desc: "LLM integration into business processes (ChatGPT, Claude, Gemini, local models), AI agents in Camunda 8, neural-network-based developer effort assessment",
+        },
+        {
           icon: <HiCode />,
           title: "Programming Languages",
-          desc: "Java, JavaScript, TypeScript, Python, PL/SQL",
+          desc: "Java, Kotlin, JavaScript, TypeScript, Python, PL/SQL",
         },
         {
           icon: <HiDatabase />,
@@ -67,9 +106,14 @@ export function CV() {
       title: "Навыки и экспертиза",
       items: [
         {
+          icon: <HiSparkles />,
+          title: "AI-практика",
+          desc: "Интеграция LLM в бизнес-процессы (ChatGPT, Claude, Gemini, локальные модели), AI-агенты в Camunda 8, методика оценки трудозатрат разработчиков нейросетями",
+        },
+        {
           icon: <HiCode />,
           title: "Языки программирования",
-          desc: "Java, JavaScript, TypeScript, Python, PL/SQL",
+          desc: "Java, Kotlin, JavaScript, TypeScript, Python, PL/SQL",
         },
         {
           icon: <HiDatabase />,
@@ -93,6 +137,21 @@ export function CV() {
   const experience = {
     en: [
       {
+        period: "2025 - present",
+        role: "Independent Consultant — Business Architect / Tech Lead",
+        company: "ivandonchenko.ru",
+        description:
+          "Three projects in three domains. Loan origination pipeline for a fintech: led the development of a BPM platform on Flowable 8/Kotlin, 6.7→8 upgrade without stopping the business, Testcontainers-based test platform. AI-powered first-line ticket handling for an international booking service: BPMN processes with LLM agents on Camunda 8. Corporate data lake: ETL from four business systems, Airflow, n8n, dashboards. Plus a neural-network-based methodology for assessing developer effort.",
+        tags: [
+          "Flowable 8",
+          "Camunda 8",
+          "Kotlin",
+          "LLM",
+          "Airflow",
+          "Testcontainers",
+        ],
+      },
+      {
         period: "2024 - 2025",
         role: "System architect",
         company: "Solvo",
@@ -102,7 +161,7 @@ export function CV() {
       },
       {
         period: "2020 - 2023",
-        role: "Product architect",
+        role: "CEO & Chief Product Architect",
         company: "Galor",
         description:
           "Product and architecture design, database and API modeling. Development and execution of product strategy, full product lifecycle management, customer journey digitalization, and leadership of the development team.",
@@ -143,6 +202,21 @@ export function CV() {
     ],
     ru: [
       {
+        period: "2025 - н. в.",
+        role: "Независимый консультант — бизнес-архитектор / Tech Lead",
+        company: "ivandonchenko.ru",
+        description:
+          "Три проекта в трёх доменах. Кредитный конвейер для финтеха: руководство разработкой BPM-платформы на Flowable 8/Kotlin, апгрейд с 6.7 без остановки бизнеса, платформа автотестов на Testcontainers. AI-обработка обращений первой линии поддержки международного сервиса бронирования: BPMN-процессы с LLM-агентами на Camunda 8. Корпоративный Data Lake: ETL из четырёх бизнес-систем, Airflow, n8n, дашборды. Плюс методика оценки трудозатрат разработчиков с применением нейросетей.",
+        tags: [
+          "Flowable 8",
+          "Camunda 8",
+          "Kotlin",
+          "LLM",
+          "Airflow",
+          "Testcontainers",
+        ],
+      },
+      {
         period: "2024 - 2025",
         role: "Системный архитектор",
         company: "Solvo",
@@ -161,7 +235,7 @@ export function CV() {
       },
       {
         period: "2020 - 2023",
-        role: "Архитектор продукта",
+        role: "Генеральный директор / главный архитектор продукта",
         company: "Галор",
         description:
           "Проектирование продукта и архитектуры, моделирование БД и API. Разработка и реализация продуктовой стратегии, управление полным жизненным циклом продукта, цифровизация клиентских путей и руководство командой разработки.",
@@ -228,6 +302,7 @@ export function CV() {
     },
   };
 
+  const currentProfile = language === "en" ? profile.en : profile.ru;
   const currentSkills = language === "en" ? skills.en : skills.ru;
   const currentExperience = language === "en" ? experience.en : experience.ru;
   const currentEducation = language === "en" ? education.en : education.ru;
@@ -245,8 +320,8 @@ export function CV() {
             }
             description={
               language === "en"
-                ? "14+ years in software development and architecture. Java, Kotlin, Spring, Camunda, microservices. Enterprise projects in government, energy, and logistics."
-                : "14+ лет в разработке и архитектуре ПО. Java, Kotlin, Spring, Camunda, микросервисы. Проекты в госсекторе, энергетике и логистике."
+                ? "15 years in IT: business architecture, business analysis, BPM (Camunda/Flowable), AI process automation, Java/Kotlin. From government to fintech."
+                : "15 лет в IT: бизнес-архитектура, бизнес-анализ, BPM (Camunda/Flowable), AI-автоматизация процессов, Java/Kotlin. От Минэнерго до финтеха."
             }
           />
           <h1 className="text-4xl font-display font-bold mb-2">
@@ -254,13 +329,13 @@ export function CV() {
           </h1>
           <p className="text-slate-600 dark:text-slate-400">
             {language === "en"
-              ? "Lead Software Architect"
-              : "Ведущий архитектор ПО"}
+              ? "Lead Business Architect · Business Analyst · 15 years of engineering background"
+              : "Ведущий бизнес-архитектор · Бизнес-аналитик · 15 лет инженерного бэкграунда"}
           </p>
         </div>
         <Button asChild className="bg-red-600 hover:bg-red-700 text-white">
           <a
-            href="https://spb.hh.ru/resume/2dff6faeff0cde804d0039ed1f4b3074475038"
+            href="https://spb.hh.ru/resume/32ac5478ff0fc1f7e30039ed1f4d71624c3742"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center"
@@ -272,6 +347,22 @@ export function CV() {
           </a>
         </Button>
       </div>
+
+      {/* Profile */}
+      <section className="mb-12">
+        <Card className="p-6">
+          <p className="text-slate-700 dark:text-slate-300 mb-4">
+            {currentProfile.text}
+          </p>
+          <p className="text-sm font-medium text-primary-600 dark:text-primary-400 mb-4">
+            {currentProfile.formula}
+          </p>
+          <h3 className="font-bold text-sm uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">
+            {currentProfile.domainsTitle}
+          </h3>
+          <TagList tags={currentProfile.domains} size="sm" />
+        </Card>
+      </section>
 
       {/* Skills */}
       <section className="mb-12">

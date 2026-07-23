@@ -14,7 +14,7 @@ description: "Способы связаться со мной"
 - **Facebook**: [facebook.com/IvanDonchenko](https://facebook.com/IvanDonchenko)
 - **Habr Карьера**: [career.habr.com/moares](https://career.habr.com/moares)
 - **Хабр**: [habr.com/ru/users/IvanDonchenko](https://habr.com/ru/users/IvanDonchenko/)
-- **HeadHunter**: [hh.ru/resume/2dff6faeff0cde804d0039ed1f4b3074475038](https://spb.hh.ru/resume/2dff6faeff0cde804d0039ed1f4b3074475038)
+- **HeadHunter**: [hh.ru/resume/32ac5478ff0fc1f7e30039ed1f4d71624c3742](https://hh.ru/resume/32ac5478ff0fc1f7e30039ed1f4d71624c3742)
 - **Telegram**: [@moarse](https://t.me/moarse)
 
 Предпочитаю общение через Telegram или email. Отвечаю в течение 24 часов.

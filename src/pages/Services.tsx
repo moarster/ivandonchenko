@@ -6,147 +6,147 @@ import { Card } from "@/components/ui/Card";
 import { TagList } from "@/components/ui/TagList";
 import { useLanguage } from "@/hooks/useLanguage";
 
-const services = {
+interface Service {
+  title: string;
+  subtitle: string;
+  description: string;
+  highlights: string[];
+  caseNote?: string;
+  tags: string[];
+}
+
+const services: Record<"en" | "ru", Service[]> = {
   en: [
     {
-      title: "IT Architecture",
-      subtitle: "Audit, Design & Transformation",
+      title: "Business Process Automation (BPM)",
+      subtitle: "From process map to working system",
       description:
-        "System architecture design for enterprise projects: from audit of existing solutions to building new platforms from scratch. Microservices, integration layers, API design, and digital transformation roadmaps.",
-      tags: [
-        "Microservices",
-        "SOA",
-        "DDD",
-        "REST/gRPC",
-        "C4/Arc42",
-        "API Gateway",
-      ],
+        "Requests live in email and spreadsheets, and nobody knows where the process is stuck? I map the process, model it in BPMN, deploy Camunda or Flowable, and take it to a working system: integrations, error handling, monitoring.",
       highlights: [
-        "Architecture audit and risk assessment",
-        "Monolith-to-microservices transformation",
-        "Integration layer and API design",
-        "Technology selection consulting",
+        "Process discovery and BPMN/DMN modeling",
+        "Camunda & Flowable implementation, 7→8 migrations",
+        "Integrations, error handling, monitoring",
+        "5 years of Camunda in production",
       ],
+      caseNote:
+        "Recent case: a loan origination pipeline for a fintech on Flowable 8 — led the development.",
+      tags: ["Camunda 7/8", "Flowable", "BPMN", "DMN", "Kotlin/Java"],
     },
     {
-      title: "Java / Kotlin Backend",
-      subtitle: "Development, Refactoring & Modernization",
+      title: "AI in Business Processes",
+      subtitle: "LLM agents embedded in workflows",
       description:
-        "Full-cycle backend development on Java/Kotlin with Spring ecosystem. From greenfield projects to modernization of legacy systems, performance optimization, and migration to newer platform versions.",
-      tags: ["Java", "Kotlin", "Spring Boot/Cloud", "PostgreSQL", "Docker"],
+        "Your team reads emails, requests, and contracts by hand? I embed LLMs (ChatGPT, Claude, Gemini, local models) directly into the process: request classification and routing, document analysis, response drafting. Economics first, then implementation.",
       highlights: [
-        "Spring Boot/Cloud microservices",
-        "REST API & OpenAPI design",
-        "Legacy modernization (Java 8→21, Spring Boot 2→3)",
-        "Performance optimization and code audit",
+        "Request classification and routing",
+        "Document analysis and response drafting",
+        "AI agents inside BPMN processes (Camunda 8)",
+        "ROI estimate before implementation",
       ],
+      caseNote:
+        "Production case: AI-powered ticket handling for the first-line support of an international booking service — BPMN processes with LLM agents on Camunda 8.",
+      tags: ["LLM", "ChatGPT / Claude / Gemini", "Local models", "Camunda 8"],
     },
     {
-      title: "Camunda / Flowable",
-      subtitle: "BPM & Process Automation",
+      title: "Business Analysis & Architecture",
+      subtitle: "Requirements, audit, transformation",
       description:
-        "Business process automation with Camunda and Flowable platforms. BPMN/DMN modeling, Job Worker development, process orchestration, and migration between platform versions.",
-      tags: [
-        "Camunda 7/8",
-        "Flowable",
-        "BPMN",
-        "DMN",
-        "Job Workers",
-        "Connectors",
-      ],
+        "A project stalls because business and engineering don’t speak the same language? I elicit and structure requirements, design the solution, and document it so both management and developers understand it — even a year later.",
       highlights: [
-        "Process modeling and orchestration",
-        "Job Workers in Java/Kotlin/TypeScript",
-        "System integration via connectors",
-        "Camunda 7→8 migration",
+        "Requirements elicitation and structuring",
+        "Architecture and process audit",
+        "Transformation roadmap without stopping the business",
+        "Pre-investment due diligence",
+        "Documentation that lasts: C4, ADR",
       ],
+      tags: ["BPMN", "C4", "ADR", "Arc42", "UML"],
     },
     {
-      title: "Pipeline / ETL / BI",
-      subtitle: "Data Integration & Analytics",
+      title: "Data & Integrations",
+      subtitle: "ETL, dashboards, a single source of truth",
       description:
-        "Data integration pipelines, ETL processes, and analytics infrastructure. Connecting corporate systems, government services, databases, and external APIs into a unified data flow.",
-      tags: ["Apache NiFi", "Airflow", "Kafka", "n8n", "SQL", "BI"],
+        "Data entered twice, reports assembled by hand? I connect CRM, ERP, 1C, and government services, build ETL and dashboards. If a simple script solves it, I won’t drag in a heavy platform.",
       highlights: [
-        "ETL pipeline design and implementation",
-        "System integration (CRM, ERP, 1C)",
+        "System integration (CRM, ERP, 1C, government services)",
+        "ETL pipelines: Airflow, n8n, NiFi",
+        "Dashboards: Grafana, Metabase",
         "Data migration with transformation",
-        "Monitoring and alerting setup",
       ],
+      caseNote:
+        "Recent case: a corporate data lake with ETL from four business systems.",
+      tags: ["Airflow", "n8n", "NiFi", "PostgreSQL", "Grafana", "Metabase"],
     },
   ],
   ru: [
     {
-      title: "Архитектура ИТ-систем",
-      subtitle: "Аудит, проектирование, трансформация",
+      title: "Автоматизация бизнес-процессов (BPM)",
+      subtitle: "От схемы процесса до работающей системы",
       description:
-        "Проектирование архитектуры корпоративных систем: от аудита существующих решений до создания новых платформ с нуля. Микросервисы, интеграционные слои, проектирование API и дорожные карты цифровой трансформации.",
+        "Заявки живут в почте и Excel, и никто не знает, где застрял процесс? Разберу процесс, смоделирую его в BPMN, внедрю Camunda или Flowable и доведу до работающей системы: интеграции, обработка ошибок, мониторинг.",
+      highlights: [
+        "Анализ процесса и моделирование BPMN/DMN",
+        "Внедрение Camunda и Flowable, миграции 7→8",
+        "Интеграции, обработка ошибок, мониторинг",
+        "5 лет Camunda в production",
+      ],
+      caseNote:
+        "Свежий кейс: кредитный конвейер для финтеха на Flowable 8 — руководил разработкой.",
+      tags: ["Camunda 7/8", "Flowable", "BPMN", "DMN", "Kotlin/Java"],
+    },
+    {
+      title: "AI в бизнес-процессах",
+      subtitle: "LLM-агенты внутри процессов",
+      description:
+        "Сотрудники вручную читают письма, заявки и договоры? Встрою LLM (ChatGPT, Claude, Gemini, локальные модели) прямо в процесс: классификация и маршрутизация обращений, разбор документов, подготовка ответов. Сначала считаем экономику, потом внедряем.",
+      highlights: [
+        "Классификация и маршрутизация обращений",
+        "Разбор документов и подготовка ответов",
+        "AI-агенты внутри BPMN-процессов (Camunda 8)",
+        "Оценка экономики до внедрения",
+      ],
+      caseNote:
+        "Боевой кейс: AI-обработка обращений первой линии поддержки международного сервиса бронирования — BPMN-процессы с LLM-агентами на Camunda 8.",
       tags: [
-        "Микросервисы",
-        "SOA",
-        "DDD",
-        "REST/gRPC",
-        "C4/Arc42",
-        "API Gateway",
-      ],
-      highlights: [
-        "Аудит архитектуры и оценка рисков",
-        "Трансформация монолита в микросервисы",
-        "Проектирование интеграционного слоя и API",
-        "Консалтинг по выбору технологий",
+        "LLM",
+        "ChatGPT / Claude / Gemini",
+        "Локальные модели",
+        "Camunda 8",
       ],
     },
     {
-      title: "Java / Kotlin Backend",
-      subtitle: "Разработка, рефакторинг, модернизация",
+      title: "Бизнес-анализ и архитектура",
+      subtitle: "Требования, аудит, трансформация",
       description:
-        "Полный цикл backend-разработки на Java/Kotlin со стеком Spring. От новых проектов до модернизации legacy-систем, оптимизации производительности и миграции на актуальные версии.",
-      tags: ["Java", "Kotlin", "Spring Boot/Cloud", "PostgreSQL", "Docker"],
+        "Проект буксует, потому что бизнес и разработка говорят на разных языках? Сниму и структурирую требования, спроектирую решение и задокументирую так, что будет понятно и менеджменту, и разработчикам — даже через год.",
       highlights: [
-        "Микросервисы на Spring Boot/Cloud",
-        "Проектирование REST API и OpenAPI",
-        "Модернизация legacy (Java 8→21, Spring Boot 2→3)",
-        "Оптимизация производительности и аудит кода",
+        "Снятие и структурирование требований",
+        "Аудит архитектуры и процессов",
+        "План трансформации без остановки бизнеса",
+        "Due diligence перед инвестициями",
+        "Документация, которая живёт: C4, ADR",
       ],
+      tags: ["BPMN", "C4", "ADR", "Arc42", "UML"],
     },
     {
-      title: "Camunda / Flowable",
-      subtitle: "BPM и автоматизация процессов",
+      title: "Данные и интеграции",
+      subtitle: "ETL, дашборды, единый источник правды",
       description:
-        "Автоматизация бизнес-процессов на платформах Camunda и Flowable. Моделирование BPMN/DMN, разработка Job Workers, оркестрация процессов и миграция между версиями.",
-      tags: [
-        "Camunda 7/8",
-        "Flowable",
-        "BPMN",
-        "DMN",
-        "Job Workers",
-        "Connectors",
-      ],
+        "Данные вводятся дважды, отчёты собираются руками? Свяжу CRM, ERP, 1С и госсервисы, построю ETL и дашборды. Если задача решается простым скриптом — не буду тащить тяжёлую платформу.",
       highlights: [
-        "Моделирование и оркестрация процессов",
-        "Job Workers на Java/Kotlin/TypeScript",
-        "Интеграция систем через коннекторы",
-        "Миграция Camunda 7→8",
-      ],
-    },
-    {
-      title: "Pipeline / ETL / BI",
-      subtitle: "Интеграция данных и аналитика",
-      description:
-        "Пайплайны интеграции данных, ETL-процессы и аналитическая инфраструктура. Связывание корпоративных систем, госсервисов, баз данных и внешних API в единый поток данных.",
-      tags: ["Apache NiFi", "Airflow", "Kafka", "n8n", "SQL", "BI"],
-      highlights: [
-        "Проектирование и реализация ETL-пайплайнов",
-        "Интеграция систем (CRM, ERP, 1С)",
+        "Интеграция систем (CRM, ERP, 1С, госсервисы)",
+        "ETL-пайплайны: Airflow, n8n, NiFi",
+        "Дашборды: Grafana, Metabase",
         "Миграция данных с трансформацией",
-        "Настройка мониторинга и алертинга",
       ],
+      caseNote:
+        "Свежий кейс: корпоративный Data Lake — ETL из Bitrix24, ПланФакт, CallTouch и 1С.",
+      tags: ["Airflow", "n8n", "NiFi", "PostgreSQL", "Grafana", "Metabase"],
     },
   ],
 };
 
 export function Services() {
-  const { language, localePath } = useLanguage();
+  const { language, t, localePath } = useLanguage();
   const currentServices = services[language];
 
   return (
@@ -159,8 +159,8 @@ export function Services() {
         }
         description={
           language === "en"
-            ? "IT architecture audit, Java/Kotlin backend development, Camunda/Flowable BPM automation, ETL pipelines and data integration."
-            : "Аудит ИТ-архитектуры, backend-разработка на Java/Kotlin, автоматизация BPM на Camunda/Flowable, ETL-пайплайны и интеграция данных."
+            ? "Camunda/Flowable business process automation, AI/LLM agents in workflows, business analysis, architecture audit, integrations and ETL."
+            : "Автоматизация бизнес-процессов на Camunda/Flowable, AI и LLM-агенты в процессах, бизнес-анализ, аудит архитектуры, интеграции и ETL."
         }
       />
       <div className="max-w-6xl mx-auto">
@@ -169,8 +169,8 @@ export function Services() {
         </h1>
         <p className="text-xl text-slate-600 dark:text-slate-400 mb-12">
           {language === "en"
-            ? "I help companies design, build, and modernize software systems. Here are my key areas of expertise."
-            : "Помогаю компаниям проектировать, создавать и модернизировать программные системы. Основные направления работы."}
+            ? "I help businesses automate processes and bring order to their systems — with AI where it pays off, and without it where a simple script will do."
+            : "Помогаю бизнесу автоматизировать процессы и наводить порядок в системах — с нейросетями там, где они дают эффект, и без них там, где хватает простого скрипта."}
         </p>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -200,24 +200,43 @@ export function Services() {
                 ))}
               </ul>
 
+              {service.caseNote && (
+                <p className="text-sm italic text-slate-500 dark:text-slate-400 mb-4">
+                  {service.caseNote}
+                </p>
+              )}
+
               <TagList tags={service.tags} size="sm" />
+
+              <Button asChild className="mt-4 self-start">
+                <Link to={localePath("/contact")}>
+                  {t("discussCase")}
+                  <HiArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+              </Button>
             </Card>
           ))}
         </div>
 
+        <p className="mt-12 text-slate-500 dark:text-slate-400 text-center max-w-3xl mx-auto">
+          {language === "en"
+            ? "What I don’t do: “just a Java senior” staff augmentation, template websites, bots-for-hire. My value is the bundle: analysis + architecture + delivery."
+            : "Чем я не занимаюсь: аутстафф «просто Java-сеньором», типовые сайты и боты. Моя ценность — связка: анализ + архитектура + внедрение."}
+        </p>
+
         <Card className="mt-12 p-8 bg-linear-to-r from-primary-500 to-primary-600 text-white border-0">
           <div className="text-center">
             <h3 className="text-2xl font-display font-bold mb-4">
-              {language === "en" ? "Have a project in mind?" : "Есть проект?"}
+              {language === "en" ? "Have a task in mind?" : "Есть задача?"}
             </h3>
             <p className="mb-6 opacity-90">
               {language === "en"
-                ? "Let's discuss your task — I'll suggest the best approach and estimate the timeline"
-                : "Давайте обсудим задачу — подскажу оптимальный подход и оценю сроки"}
+                ? "Describe it in your own words — I’ll suggest the best approach and estimate the timeline"
+                : "Опишите её своими словами — подскажу оптимальный подход и оценю сроки"}
             </p>
             <Button variant="secondary" size="lg" asChild>
               <Link to={localePath("/contact")}>
-                {language === "en" ? "Get in Touch" : "Связаться"}
+                {t("discussCase")}
                 <HiArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </Button>

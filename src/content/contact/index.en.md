@@ -15,7 +15,7 @@ You can contact me through any of the following channels:
 - **Facebook**: [facebook.com/IvanDonchenko](https://facebook.com/IvanDonchenko)
 - **Habr Career**: [career.habr.com/moares](https://career.habr.com/moares)
 - **Habr**: [habr.com/ru/users/IvanDonchenko](https://habr.com/ru/users/IvanDonchenko/)
-- **HeadHunter**: [hh.ru/resume/2dff6faeff0cde804d0039ed1f4b3074475038](https://spb.hh.ru/resume/2dff6faeff0cde804d0039ed1f4b3074475038)
+- **HeadHunter**: [hh.ru/resume/32ac5478ff0fc1f7e30039ed1f4d71624c3742](https://spb.hh.ru/resume/32ac5478ff0fc1f7e30039ed1f4d71624c3742)
 - **Telegram**: [@moarse](https://t.me/moarse)
 
 I prefer communication via Telegram or email. I typically respond within 24 hours.

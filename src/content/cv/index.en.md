@@ -1,15 +1,31 @@
 ---
-title: "Software Architect"
+title: "Lead Business Architect"
 date: 2025-04-21
-description: "Experienced System Architect with expertise in designing complex industrial systems"
-tags: ["resume", "system architect", "java", "microservices"]
+description: "Business architect and analyst with 15 years of engineering background"
+tags: ["resume", "business architect", "business analysis", "camunda", "bpm"]
 ---
 
+## Professional Profile
+
+15 years in IT: I turn business needs into industrial B2B/B2G systems — from process analysis and design to architecture and production delivery. From developer to division head to CEO of my own product startup; still hands-on — I design and write code personally, including LLM-assisted. Focus: business & systems architecture, process automation (Camunda/Flowable), embedding AI into business processes, data and integrations.
+
+**15 years of development (Java/Kotlin) · 7 years of architecture · 5 years of Camunda in production · English C1**
+
+### Expertise Across System Classes
+
+- Business Process Management (BPM)
+- Master Data Management (MDM)
+- Geographic Information Systems (GIS)
+- Enterprise Content Management (ECM)
+- Warehouse/Yard Management Systems (WMS/YMS)
+- Analytical and situational monitors, BI
+- Metrological hubs, information portals
+- Low/No-code platforms
 
 ## Professional Experience
 
-### Freelance
-**System Architect / Tech Lead** | *October 2025 — Present*
+### Independent Practice
+**Independent Consultant — Business Architect / Tech Lead** | *October 2025 — Present*
 
 > Three independent projects across different domains: BPM development for fintech, an enterprise data warehouse, and AI automation of support processes.
 
@@ -127,19 +143,3 @@ Led the development and implementation of systems in the energy sector.
 - Docker
 - API Gateway
 - RabbitMQ
-
-## Professional Profile
-
-Over 15 years of experience in designing, developing, and implementing industrial B2B/B2G WEB applications. Specialized in system architecture of complex distributed applications with microservice architecture.
-
-### Expertise in system classes:
-- Master Data Management (MDM)
-- Geographic Information Systems (GIS)
-- Enterprise Content Management (ECM)
-- Business Process Management (BPM)
-- Warehouse Management Systems (WMS)
-- Yard Management Systems (YMS)
-- Analytical and situational monitors
-- Metrological hubs
-- Information portals
-- Low/No-code platforms

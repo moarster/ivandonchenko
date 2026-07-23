@@ -19,7 +19,7 @@ const translations: Record<Language, Record<string, string>> = {
     services: "Services",
     blog: "Blog",
     blogSubtitle:
-      "Thoughts on software architecture, real-world cases, and technical insights",
+      "On processes, systems, and the people who build them — and how AI is changing automation. Real cases, no tutorials.",
     minRead: "min read",
     backToBlog: "Back to Blog",
     postNotFound: "Post not found",
@@ -30,6 +30,9 @@ const translations: Record<Language, Record<string, string>> = {
     viewDetails: "View Details",
     getInTouch: "Get in Touch",
     basedIn: "Based in",
+    discussCase: "Discuss your case",
+    seeCases: "See case studies",
+    reply24h: "I reply within 24 hours",
   },
   ru: {
     home: "Главная",
@@ -39,7 +42,7 @@ const translations: Record<Language, Record<string, string>> = {
     services: "Услуги",
     blog: "Блог",
     blogSubtitle:
-      "Мысли об архитектуре ПО, реальные кейсы и технические инсайты",
+      "О процессах, системах и людях, которые их создают, — и о том, как нейросети меняют автоматизацию. Реальные кейсы, без туториалов.",
     minRead: "мин чтения",
     backToBlog: "Назад к блогу",
     postNotFound: "Статья не найдена",
@@ -50,6 +53,9 @@ const translations: Record<Language, Record<string, string>> = {
     viewDetails: "Подробнее",
     getInTouch: "Связаться",
     basedIn: "Базируюсь в",
+    discussCase: "Обсудить задачу",
+    seeCases: "Смотреть кейсы",
+    reply24h: "Отвечаю в течение 24 часов",
   },
 };
 

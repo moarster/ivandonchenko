@@ -55,7 +55,7 @@ export function Contact() {
       icon: <FiFileText className="w-6 h-6" />,
       label: "HeadHunter",
       value: language === "en" ? "My Resume" : "Моё резюме",
-      href: "https://spb.hh.ru/resume/2dff6faeff0cde804d0039ed1f4b3074475038",
+      href: "https://spb.hh.ru/resume/32ac5478ff0fc1f7e30039ed1f4d71624c3742",
     },
   ];
 
@@ -69,8 +69,8 @@ export function Contact() {
         }
         description={
           language === "en"
-            ? "Get in touch with Ivan Donchenko — software architect based in Saint Petersburg. Telegram, email, LinkedIn, GitHub."
-            : "Связаться с Иваном Донченко — архитектором ПО из Санкт-Петербурга. Telegram, email, LinkedIn, GitHub."
+            ? "Get in touch with Ivan Donchenko — business architect and analyst based in Saint Petersburg. Telegram, email, LinkedIn, GitHub."
+            : "Связаться с Иваном Донченко — бизнес-архитектором и аналитиком из Санкт-Петербурга. Telegram, email, LinkedIn, GitHub."
         }
       />
       <div className="max-w-4xl mx-auto">
@@ -121,8 +121,8 @@ export function Contact() {
           </h2>
           <p className="text-slate-700 dark:text-slate-300 mb-4">
             {language === "en"
-              ? "Need support with software architecture, technical guidance, or development team management? I’ll help make your project run smoothly. Share the details — and we’ll work out the best approach for your goals."
-              : "Помогу с архитектурой ПО, технической экспертизой или управлением разработкой — чтобы ваш проект двигался чётко и без лишних сложностей. Расскажите о задаче, и мы вместе найдём подходящий подход."}
+              ? "Need to automate a process, untangle requirements and architecture, or bring AI into your operations? Describe the problem in your own words — no spec needed. I reply within 24 hours."
+              : "Нужно автоматизировать процесс, навести порядок в требованиях и архитектуре или встроить AI в работу компании? Опишите задачу своими словами — готовое ТЗ не нужно. Отвечаю в течение 24 часов."}
           </p>
           {/*          <p className="text-slate-600 dark:text-slate-400 text-sm">
             {language === "en"

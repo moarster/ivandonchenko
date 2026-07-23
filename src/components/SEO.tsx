@@ -8,16 +8,34 @@ interface SEOProps {
   type?: string;
 }
 
+const defaults = {
+  en: {
+    title: "Ivan Donchenko — Business Architect · BPM & AI Process Automation",
+    description:
+      "Business architect and analyst with 15 years in IT. Business process automation (Camunda/Flowable), AI agents in workflows, integrations and data — from analysis to production.",
+  },
+  ru: {
+    title: "Иван Донченко — Бизнес-архитектор · Автоматизация бизнес-процессов",
+    description:
+      "Бизнес-архитектор и аналитик с 15-летним инженерным бэкграундом. Автоматизация процессов на Camunda/Flowable, AI-агенты в бизнес-процессах, интеграции и данные.",
+  },
+};
+
 export function SEO({
-  title = "Ivan Donchenko - Lead Software Architect",
-  description = "Software architect with 15+ years of experience in designing scalable systems and leading digital transformation projects",
+  title,
+  description,
   image = "/images/og-image.jpg",
   type = "website",
 }: SEOProps) {
   const location = useLocation();
+  const isEnPath =
+    location.pathname === "/en" || location.pathname.startsWith("/en/");
+  const locale = defaults[isEnPath ? "en" : "ru"];
+  const resolvedTitle = title ?? locale.title;
+  const resolvedDescription = description ?? locale.description;
 
   useEffect(() => {
-    document.title = title;
+    document.title = resolvedTitle;
 
     const base = "https://ivandonchenko.ru";
     const path = location.pathname;
@@ -29,16 +47,16 @@ export function SEO({
     document.documentElement.lang = isEn ? "en" : "ru";
 
     const metaTags = [
-      { name: "description", content: description },
-      { property: "og:title", content: title },
-      { property: "og:description", content: description },
+      { name: "description", content: resolvedDescription },
+      { property: "og:title", content: resolvedTitle },
+      { property: "og:description", content: resolvedDescription },
       { property: "og:image", content: image },
       { property: "og:url", content: url },
       { property: "og:type", content: type },
       { property: "og:locale", content: isEn ? "en_US" : "ru_RU" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: title },
-      { name: "twitter:description", content: description },
+      { name: "twitter:title", content: resolvedTitle },
+      { name: "twitter:description", content: resolvedDescription },
       { name: "twitter:image", content: image },
     ];
 
@@ -80,7 +98,7 @@ export function SEO({
 
       element.setAttribute("href", href);
     }
-  }, [title, description, image, type, location.pathname]);
+  }, [resolvedTitle, resolvedDescription, image, type, location.pathname]);
 
   return null;
 }
