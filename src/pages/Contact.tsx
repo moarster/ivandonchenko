@@ -124,7 +124,7 @@ export function Contact() {
               ? "Need support with software architecture, technical guidance, or development team management? I’ll help make your project run smoothly. Share the details — and we’ll work out the best approach for your goals."
               : "Помогу с архитектурой ПО, технической экспертизой или управлением разработкой — чтобы ваш проект двигался чётко и без лишних сложностей. Расскажите о задаче, и мы вместе найдём подходящий подход."}
           </p>
-{/*          <p className="text-slate-600 dark:text-slate-400 text-sm">
+          {/*          <p className="text-slate-600 dark:text-slate-400 text-sm">
             {language === "en"
               ? "📍 Based in Saint-Petersburg, Russia"
               : "📍 Живу в Санкт-Петербурге, Россия"}
