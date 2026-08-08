@@ -7,6 +7,7 @@ import {
   HiSparkles,
   HiUsers,
 } from "react-icons/hi";
+import { Link } from "react-router-dom";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
@@ -37,7 +38,7 @@ const HHIcon = () => (
 );
 
 export function CV() {
-  const { language } = useLanguage();
+  const { language, localePath } = useLanguage();
 
   const profile = {
     en: {
@@ -477,9 +478,9 @@ export function CV() {
               : "Опишите команду и задачу — отвечаю в течение 24 часов"}
           </p>
           <Button variant="secondary" size="lg" asChild>
-            <a href="/contact">
+            <Link to={localePath("/contact")}>
               {language === "en" ? "Get in Touch" : "Связаться"}
-            </a>
+            </Link>
           </Button>
         </div>
       </Card>
