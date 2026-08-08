@@ -1,18 +1,20 @@
 ![My photo](/images/userpic.jpg)
 
-> My career is a spiral: developer → team lead → project manager → head of division → CEO of my own startup → business architect. Every loop stayed with me: I analyze like a business analyst, design like an architect, weigh risks like a project manager, and count the economics like the CEO I once was. That’s why I don’t need a chain of translators between business and code — I am that translator.
+> My career is a spiral: developer → team lead → project manager → head of division → CTO of my own startup → full-cycle technical leader. Every loop stayed with me: I elicit requirements like an analyst, design like an architect, weigh schedules and risks like a project manager, count the economics like the CEO I once was — and I still write code. That’s why I don’t need a chain of translators between the business and the team.
 
 ## 💰 Professional Experience
 
 Fifteen years in IT have taught me a lot — I’ve picked up all kinds of skills along the way:
 
-- **Development** in Java, JavaScript, TypeScript (React+Node), Python
-- Designing and administering **databases**: PostgreSQL, Oracle, MongoDB
-- **Managing** government and commercial projects
-- Gathering and analyzing client **requirements**
+- **Leading** development teams: hiring, onboarding, 1:1s, grades, mentoring
+- **Managing** government and commercial projects: schedules, budgets, risks
+- **Planning** releases, breaking work down and estimating effort together with the team
+- Designing software **architecture** and reviewing code
 - Formalizing **business processes**, automating and orchestrating them in BPM engines
+- Gathering and analyzing client **requirements**
+- **Development** in Java, Kotlin, JavaScript, TypeScript (React+Node), Python
+- Designing and administering **databases**: PostgreSQL, Oracle, MongoDB
 - Creating user **interfaces** and prototypes
-- Designing software **architecture**
 
 My interest in machine learning and extracting meaning from messy data goes back to my bioinformatics studies at Moscow State University. Today it’s daily practice: LLMs are built into my own workflow and into the systems I design for clients — from AI agents inside business processes to a methodology for assessing developer effort. AI has brought speed and excitement back into engineering, but quality is still guaranteed by engineering practices, not prompts: documentation, testing, observability.
 

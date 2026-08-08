@@ -1,6 +1,7 @@
 import {
   HiAcademicCap,
   HiBriefcase,
+  HiClipboardList,
   HiCode,
   HiDatabase,
   HiSparkles,
@@ -40,9 +41,9 @@ export function CV() {
 
   const profile = {
     en: {
-      text: "15 years in IT: I turn business needs into industrial B2B/B2G systems — from process analysis and design to architecture and production delivery. From developer to division head to CEO of my own product startup; still hands-on — I design and write code personally, including LLM-assisted. Focus: business & systems architecture, process automation (Camunda/Flowable), embedding AI into business processes, data and integrations.",
+      text: "Technical leader who owns the whole vertical: the client conversation, requirements, architecture, breakdown and estimation, release planning, people, and code review. Fifteen years in industrial B2B/B2G systems: government, energy, logistics, fintech. Teams from 5 to 40 people. I am not the strongest engineer in the team and I don’t believe I have to be — I have always had people reporting to me who were stronger than me in their field. My job is to turn their strengths into a working system, delivered on time. And I write code today and intend to keep writing it.",
       formula:
-        "15 years of development (Java/Kotlin) · 7 years of architecture · 5 years of Camunda in production · English C1",
+        "15 years in IT · 14 years leading teams · 14 years hands-on in Java/Kotlin · 7 years of architecture · English C1",
       domainsTitle: "Expertise Across System Classes",
       domains: [
         "BPM",
@@ -55,9 +56,9 @@ export function CV() {
       ],
     },
     ru: {
-      text: "15 лет в IT: перевожу задачи бизнеса в промышленные B2B/B2G-системы — от анализа и проектирования процессов до архитектуры и приёмки в эксплуатацию. Прошёл путь от разработчика до руководителя направления и CEO собственного продуктового стартапа; остаюсь hands-on — проектирую и пишу код лично, в том числе в связке с LLM. Специализация: бизнес- и системная архитектура, автоматизация процессов (Camunda/Flowable), интеграция AI в бизнес-процессы, данные и интеграции.",
+      text: "Технический руководитель, который закрывает всю вертикаль: разговор с заказчиком, требования, архитектура, декомпозиция и оценка, планирование релизов, работа с людьми и код-ревью. Пятнадцать лет в промышленных B2B/B2G-системах: госсектор, энергетика, логистика, финтех. Команды от 5 до 40 человек. Я не самый сильный инженер в команде и не считаю, что должен им быть, — у меня всегда были подчинённые сильнее меня в своей области. Моё дело в том, чтобы из их сильных сторон собралась работающая система, сданная в срок. И я пишу код сегодня и хочу писать дальше.",
       formula:
-        "15 лет разработки (Java/Kotlin) · 7 лет архитектуры · 5 лет Camunda в production · английский C1",
+        "15 лет в IT · 14 лет руководства командами · 14 лет разработки на Java/Kotlin · 7 лет архитектуры · английский C1",
       domainsTitle: "Экспертиза в классах систем",
       domains: [
         "BPM",
@@ -76,29 +77,34 @@ export function CV() {
       title: "Skills & Expertise",
       items: [
         {
-          icon: <HiSparkles />,
-          title: "AI Practice",
-          desc: "LLM integration into business processes (ChatGPT, Claude, Gemini, local models), AI agents in Camunda 8, neural-network-based developer effort assessment",
+          icon: <HiUsers />,
+          title: "People & Leadership",
+          desc: "Hiring and onboarding, regular 1:1s, grades and development, mentoring, retention. Built teams from zero and transformed existing ones",
         },
         {
-          icon: <HiCode />,
-          title: "Programming Languages",
-          desc: "Java, Kotlin, JavaScript, TypeScript, Python, PL/SQL",
-        },
-        {
-          icon: <HiDatabase />,
-          title: "Databases & Storage",
-          desc: "PostgreSQL, Oracle, MongoDB, Redis, Kafka, RabbitMQ",
+          icon: <HiClipboardList />,
+          title: "Delivery & Planning",
+          desc: "Breakdown, effort and schedule estimation together with the team, sprints and releases, backlog and roadmap, risks and escalation. Agile, Scrum, Kanban, Jira, Confluence",
         },
         {
           icon: <HiBriefcase />,
-          title: "Architecture & Tools",
-          desc: "Microservices, REST API, Docker, Camunda, Spring Cloud",
+          title: "Client & Business",
+          desc: "Direct work with the client and product owner, requirements management, acceptance and demos, presales. GOST 34, requirements traceability down to implementation",
         },
         {
-          icon: <HiUsers />,
-          title: "Management & Leadership",
-          desc: "Team Lead, Product Management, Agile, Scrum",
+          icon: <HiCode />,
+          title: "Engineering & Stack",
+          desc: "Java, Kotlin, Spring Boot/Cloud, microservices, REST and gRPC, Camunda 7/8, Flowable, BPMN, DDD. Code review, quality gates, GitLab CI/CD, Testcontainers, C4 and ADR",
+        },
+        {
+          icon: <HiDatabase />,
+          title: "Data & Infrastructure",
+          desc: "PostgreSQL, Oracle, MongoDB, Redis, Kafka, RabbitMQ. Docker, Kubernetes, Prometheus, Grafana, ELK, OpenTelemetry",
+        },
+        {
+          icon: <HiSparkles />,
+          title: "AI Practice",
+          desc: "LLM integration into business processes (ChatGPT, Claude, Gemini, local models), AI agents in Camunda 8, neural-network-based developer effort assessment",
         },
       ],
     },
@@ -106,29 +112,34 @@ export function CV() {
       title: "Навыки и экспертиза",
       items: [
         {
-          icon: <HiSparkles />,
-          title: "AI-практика",
-          desc: "Интеграция LLM в бизнес-процессы (ChatGPT, Claude, Gemini, локальные модели), AI-агенты в Camunda 8, методика оценки трудозатрат разработчиков нейросетями",
+          icon: <HiUsers />,
+          title: "Люди и лидерство",
+          desc: "Наём и онбординг, регулярные 1:1, грейды и развитие, менторинг, удержание. Собирал команды с нуля и трансформировал существующие",
         },
         {
-          icon: <HiCode />,
-          title: "Языки программирования",
-          desc: "Java, Kotlin, JavaScript, TypeScript, Python, PL/SQL",
-        },
-        {
-          icon: <HiDatabase />,
-          title: "Базы данных и хранилища",
-          desc: "PostgreSQL, Oracle, MongoDB, Minio, Redis, Kafka, RabbitMQ",
+          icon: <HiClipboardList />,
+          title: "Delivery и планирование",
+          desc: "Декомпозиция, оценка трудоёмкости и сроков вместе с командой, спринты и релизы, бэклог и roadmap, риски и эскалация. Agile, Scrum, Kanban, Jira, Confluence",
         },
         {
           icon: <HiBriefcase />,
-          title: "Архитектура и инструменты",
-          desc: "Микросервисы, REST API, Docker, Camunda, Spring Cloud",
+          title: "Заказчик и бизнес",
+          desc: "Прямая работа с заказчиком и product owner, управление требованиями, приёмка и демонстрации, пресейл. ГОСТ 34, трассируемость требований до реализации",
         },
         {
-          icon: <HiUsers />,
-          title: "Управление и лидерство",
-          desc: "Team Lead, Product Management, Agile, Scrum",
+          icon: <HiCode />,
+          title: "Инженерия и стек",
+          desc: "Java, Kotlin, Spring Boot/Cloud, микросервисы, REST и gRPC, Camunda 7/8, Flowable, BPMN, DDD. Код-ревью, quality gates, GitLab CI/CD, Testcontainers, C4 и ADR",
+        },
+        {
+          icon: <HiDatabase />,
+          title: "Данные и инфраструктура",
+          desc: "PostgreSQL, Oracle, MongoDB, Minio, Redis, Kafka, RabbitMQ. Docker, Kubernetes, Prometheus, Grafana, ELK, OpenTelemetry",
+        },
+        {
+          icon: <HiSparkles />,
+          title: "AI-практика",
+          desc: "Интеграция LLM в бизнес-процессы (ChatGPT, Claude, Gemini, локальные модели), AI-агенты в Camunda 8, методика оценки трудозатрат разработчиков нейросетями",
         },
       ],
     },
@@ -138,10 +149,10 @@ export function CV() {
     en: [
       {
         period: "2025 - present",
-        role: "Independent Consultant — Business Architect / Tech Lead",
-        company: "ivandonchenko.ru",
+        role: "Tech Lead — technical project leader",
+        company: "Independent practice",
         description:
-          "Three projects in three domains. Loan origination pipeline for a fintech: led the development of a BPM platform on Flowable 8/Kotlin, 6.7→8 upgrade without stopping the business, Testcontainers-based test platform. AI-powered first-line ticket handling for an international booking service: BPMN processes with LLM agents on Camunda 8. Corporate data lake: ETL from four business systems, Airflow, n8n, dashboards. Plus a neural-network-based methodology for assessing developer effort.",
+          "Three parallel projects in three domains; in each one I own the result end to end, from the client conversation to the release. Loan origination pipeline for a fintech (Kotlin + Flowable 8): breakdown, effort and schedule estimation together with the team, backlog and release plan, code review, quality gates, and the application architecture designed from scratch around Flowable 8 with a 6.7→8 engine upgrade without stopping the business. Built and applied a methodology for assessing actual developer effort using neural networks — an objective basis both for planning and for the conversation about grades. AI automation of first-line support for an international booking service: BPMN processes with LLM agents on Camunda 8, in production rather than in a pilot. Corporate data lake: ETL from four business systems, Airflow, n8n, dashboards. Hands-on throughout — job workers, delegates, REST integrations, and the test layer on Testcontainers are mine.",
         tags: [
           "Flowable 8",
           "Camunda 8",
@@ -153,60 +164,68 @@ export function CV() {
       },
       {
         period: "2024 - 2025",
-        role: "System architect",
+        role: "Platform Architect / Technical Development Lead",
         company: "Solvo",
         description:
-          "Architecture and implementation of an internal microservice platform for product development",
-        tags: ["Camunda", "Spring Cloud"],
+          "Technical lead of the platform track for the warehouse logistics product line (WMS/YMS): I set the standards the product teams worked by. Review and acceptance of the teams’ architecture and code decisions, service templates, SLAs between teams, API-first contracts (OpenAPI, code generation, Spectral). Wrote the reference services and shared libraries myself — a standard has to live in code, not in a presentation. Platform from scratch: 10+ microservices, bounded contexts, Kafka with Schema Registry, target NFRs (99.9% availability, p95 < 200 ms). Audit of 5 legacy systems and a Strangler Fig decomposition strategy without stopping the business. Regular architecture reviews with C-level on roadmap and tech debt priorities. Team of 10.",
+        tags: ["Java/Kotlin", "Spring Cloud", "Kafka", "OpenAPI", "C4"],
+      },
+      {
+        period: "2023 - 2024",
+        role: "Technical Lead / Consulting Architect",
+        company: "B2B/B2G custom development",
+        description:
+          "Custom web and BPM development for B2B/B2G. Led small teams: task definition, review, delivery to the client. Backend services on Java/Kotlin (Spring Boot/Cloud), business process automation on Camunda BPM (BPMN processes, job workers, delegates), integration design and implementation (REST, gRPC), target process design in BPMN 2.0, documentation: C4 model and process catalogues.",
+        tags: ["Camunda", "Java/Kotlin", "BPMN 2.0", "gRPC", "C4"],
       },
       {
         period: "2020 - 2023",
-        role: "CEO & Chief Product Architect",
+        role: "CTO / CEO",
         company: "Galor",
         description:
-          "Product and architecture design, database and API modeling. Development and execution of product strategy, full product lifecycle management, customer journey digitalization, and leadership of the development team.",
+          "Technical leader of a product startup founded with partners: the Soarse low-code platform, from MVP to production use in three federal agencies. Built the team from zero to 20 people — hiring, onboarding, regular 1:1s, development and training, flexible employment arrangements and a relocation programme. Set up the development process: code review, CI/CD, quality standards, release cycle. Product design: a platform of 5 builders (data, processes, interface, computation, API). Hands-on core development: an ABAC subsystem with a DSL for access policies, a view engine with JSON JOINs via an RDF store (Apache Jena). Presales and demos at department-director level in federal agencies, plus acceptance testing.",
         tags: ["Startup", "Spring Cloud", "Low-code", "React", "PostgreSQL"],
       },
       {
         period: "2019 - 2022",
-        role: "Enterprise architect",
+        role: "Implementation Lead / Technical Analyst",
         company: "Bazelevs",
         description:
-          "Design and implementation of an enterprise project management system for film production based on Jira Server. Developed project management methodology, gathered and consolidated requirements, integrated with 1C, customized workflows using Groovy scripts, and conducted user training sessions.",
+          "Implementation of BZDays, an enterprise project management system for film production based on Jira Server. Designed and rolled out the project management methodology: stages, roles, KPIs. Workflow modelling in BPMN: pre-production → production → post-production. Jira configuration and customisation: workflow schemes, permissions, Groovy scripts, plugin development, 1C integration. Requirements gathering: interviews with 30+ users — producers, management, the finance and legal departments — then consolidation and prioritisation. Training seminars: 4 groups of 10–15 people. Team of 5.",
         tags: ["Jira", "1C", "MySQL", "Groovy", "BPMN 2.0"],
       },
       {
         period: "2017 - 2020",
-        role: "Architect",
+        role: "Project Manager / Architect",
         company: "GOST-group",
         description:
-          "Architecture design for in-house and client solutions, development team management, and hands-on implementation in Java. Requirements gathering, system and business analysis, roadmap and backlog management, and creation of design artifacts",
-        tags: ["Java", "UML", "ER", "BPMN", "GIS", "PostgreSQL"],
+          "In-house product and custom B2G development. Full-cycle team and project management, from requirements gathering to production handover. Safe City for the EMERCOM directorate of the Sakhalin region — project manager in the classic sense: stage plan, deadlines, budget, risks, coordination of a distributed team of 15, direct work with the client and law-enforcement agencies. Delivered in 8 months under hard deadlines, 1,000+ cameras, emergency response time cut by 30%; the solution was later replicated in the Ryazan and Smolensk regions. Engineering and Energy Complex GIS for the St. Petersburg Energy Committee — system architect: team of 30, 28 months, 14 subsystems, report preparation time cut by 60%. Teams of 10 to 30 people.",
+        tags: ["Java", "UML", "BPMN", "GIS", "PostgreSQL", "B2G"],
       },
       {
         period: "2014 - 2017",
-        role: "Head of Development",
+        role: "Head of Development Division",
         company: "IT Energy Service",
         description:
-          "Management of the company’s key projects: architecture and overall design, data model and functional module development, and definition of technical requirements for upcoming products.",
-        tags: ["Java", "ER", "SAP BO", "GIS", "Oracle", "B2G"],
+          "Technical leadership of a portfolio of 3–5 parallel projects at once. Merger and transformation of a 35-person team (AS SIOI): I brought together the young team of the new phase and the “old guard” — programmers with 30+ years of experience who had built the first phase. Organised retraining from Excel VBA to Java, Oracle APEX and SAP BusinessObjects, and a mutual mentoring system between the generations. 97% of the team retained: one person left, for retirement. MDO Portal for the Ministry of Energy — 15,000+ energy facilities, data analysis time cut by 40%, ML-based failure prediction, Best IT Project in Fuel & Energy 2016. Teams of 15 to 40 people.",
+        tags: ["Java", "SAP BO", "Oracle", "ML", "B2G"],
       },
       {
         period: "2011 - 2014",
-        role: "Java teamlead",
+        role: "Java Team Lead / Project Manager",
         company: "IT Energy Service",
         description:
-          "Team leadership and backend development. Technical design of architecture, data model, and interfaces. Requirements analysis, preparation of specifications and documentation",
-        tags: ["Java", "ER", "ГИС", "Oracle", "Agile", "JavaScript", "PL/SQL"],
+          "Investment Program Monitoring Portal for the Ministry of Energy — project manager: budget and schedule planning, assembling a team of 10, work with the client, quality control. Delivered in 8 months. Development team leadership, code review, task definition. Backend development in Java, Oracle (PL/SQL), technical design of architecture, data model and interfaces. Requirements analysis and reporting documentation to GOST 34. Teams of 5 to 10 people.",
+        tags: ["Java", "Oracle", "PL/SQL", "GIS", "Agile", "B2G"],
       },
     ],
     ru: [
       {
         period: "2025 - н. в.",
-        role: "Независимый консультант — бизнес-архитектор / Tech Lead",
-        company: "ivandonchenko.ru",
+        role: "Tech Lead — технический руководитель проектов",
+        company: "Независимая практика",
         description:
-          "Три проекта в трёх доменах. Кредитный конвейер для финтеха: руководство разработкой BPM-платформы на Flowable 8/Kotlin, апгрейд с 6.7 без остановки бизнеса, платформа автотестов на Testcontainers. AI-обработка обращений первой линии поддержки международного сервиса бронирования: BPMN-процессы с LLM-агентами на Camunda 8. Корпоративный Data Lake: ETL из четырёх бизнес-систем, Airflow, n8n, дашборды. Плюс методика оценки трудозатрат разработчиков с применением нейросетей.",
+          "Три параллельных проекта в трёх доменах; в каждом отвечаю за результат целиком — от разговора с заказчиком до релиза. Кредитный конвейер для финтеха (Kotlin + Flowable 8): декомпозиция, оценка трудоёмкости и сроков вместе с командой, бэклог и релизный план, код-ревью, quality gates, архитектура приложения с нуля вокруг Flowable 8 и мажорный апгрейд движка с 6.7 без остановки бизнеса. Разработал и внедрил методику оценки фактических трудозатрат разработчиков с применением нейросетей — объективная база и для планирования, и для разговора о грейдах. AI-автоматизация первой линии поддержки международного сервиса бронирования: BPMN-процессы с LLM-агентами на Camunda 8, в промышленной эксплуатации, а не в пилоте. Корпоративное хранилище данных: ETL из четырёх бизнес-систем, Airflow, n8n, дашборды. Hands-on во всех трёх: Job Workers, делегаты, REST-интеграции и слой автотестов на Testcontainers пишу сам.",
         tags: [
           "Flowable 8",
           "Camunda 8",
@@ -218,27 +237,33 @@ export function CV() {
       },
       {
         period: "2024 - 2025",
-        role: "Системный архитектор",
+        role: "Архитектор платформы / технический лидер разработки",
         company: "Solvo",
         description:
-          "Проектирование и реализация внутренней микросервисной платформы разработки продуктов",
+          "Технический лидер платформенного направления продуктовой линейки складской логистики (WMS/YMS): задавал стандарты, по которым работали продуктовые команды. Ревью и приёмка архитектурных и кодовых решений команд, шаблоны сервисов, SLA между командами, API-first контракты (OpenAPI, кодогенерация, Spectral). Референсные сервисы и общие библиотеки писал лично — стандарт должен жить в коде, а не в презентации. Платформа с нуля: 10+ микросервисов, bounded contexts, Kafka со Schema Registry, целевые NFR (доступность 99.9%, p95 < 200 мс). Аудит 5 legacy-систем и стратегия декомпозиции монолитов по Strangler Fig без остановки бизнеса. Регулярные архитектурные ревью с C-level: roadmap и приоритизация техдолга. Команда 10 человек.",
         tags: [
-          "Camunda",
+          "Java/Kotlin",
           "Spring Cloud",
-          "RabbitMQ",
+          "Kafka",
+          "OpenAPI",
           "C4",
-          "REST",
-          "gRPC",
           "PostgreSQL",
-          "MongoDB",
         ],
       },
       {
+        period: "2023 - 2024",
+        role: "Технический лидер / архитектор-консультант",
+        company: "Заказная разработка B2B/B2G",
+        description:
+          "Заказная разработка WEB- и BPM-решений для B2B/B2G. Вёл небольшие команды: постановка задач, ревью, сдача заказчику. Backend-сервисы на Java/Kotlin (Spring Boot/Cloud), автоматизация бизнес-процессов на Camunda BPM (BPMN-процессы, Job Workers, делегаты), проектирование и реализация интеграций (REST, gRPC), проектирование целевых процессов в BPMN 2.0, документирование: C4-модель и каталоги процессов.",
+        tags: ["Camunda", "Java/Kotlin", "BPMN 2.0", "gRPC", "C4"],
+      },
+      {
         period: "2020 - 2023",
-        role: "Генеральный директор / главный архитектор продукта",
+        role: "Технический директор (CTO) / генеральный директор",
         company: "Галор",
         description:
-          "Проектирование продукта и архитектуры, моделирование БД и API. Разработка и реализация продуктовой стратегии, управление полным жизненным циклом продукта, цифровизация клиентских путей и руководство командой разработки.",
+          "Технический руководитель продуктового стартапа, основанного с партнёрами: Low-Code платформа Soarse, от MVP до промышленной эксплуатации в трёх федеральных ведомствах. Собрали команду с нуля до 20 человек — наём, онбординг, регулярные 1:1, развитие и обучение, гибкие форматы занятости и программа релокации. Организация процессов разработки: код-ревью, CI/CD, стандарты качества, релизный цикл. Проектирование продукта: платформа из 5 конструкторов (данные, процессы, интерфейс, вычисления, API). Hands-on разработка ядра: собственная ABAC-подсистема с DSL для политик доступа, движок представлений с JOIN по JSON через RDF-хранилище (Apache Jena). Пресейлы и показы на уровне директоров департаментов федеральных ведомств, приёмо-сдаточные испытания.",
         tags: [
           "Стартап",
           "Spring Cloud",
@@ -250,35 +275,35 @@ export function CV() {
       },
       {
         period: "2019 - 2022",
-        role: "Архитектор корпоративных систем",
+        role: "Руководитель внедрения / технический аналитик",
         company: "Bazelevs",
         description:
-          "Проектирование и внедрение корпоративной системы управления проектами кинопроизводства на базе Jira Server. Разработка методологии, сбор и консолидация требований, интеграция с 1С, кастомизация с использованием Groovy-скриптов и обучение пользователей.",
+          "Внедрение корпоративной системы управления проектами кинопроизводства BZDays на базе Jira Server. Спроектировал и внедрил методологию управления проектами: стадии, роли, KPI. Моделирование workflow-процессов в BPMN: pre-production → production → post-production. Настройка и кастомизация Jira: схемы workflow, права, Groovy-скрипты, разработка плагинов, интеграция с 1С. Сбор требований: интервью с 30+ пользователями — продюсеры, руководство, финансовый и юридический отделы, — консолидация и приоритизация. Обучающие семинары: 4 группы по 10–15 человек. Команда 5 человек.",
         tags: ["Jira", "1C", "MySQL", "Groovy", "BPMN 2.0"],
       },
       {
         period: "2017 - 2020",
-        role: "Архитектор",
+        role: "Руководитель проектов / архитектор",
         company: "GOST-group",
         description:
-          "Проектирование архитектуры внутренних и заказных решений, управление командой разработки и участие в реализации (Java). Сбор требований, системный и бизнес-анализ, ведение базы знаний, архитектурных артефактов",
-        tags: ["Java", "UML", "ER", "BPMN", "ГИС", "PostgreSQL", "Apache NiFi"],
+          "Внутренний продукт и заказная разработка для B2G. Управление командами разработки и проектами полного цикла, от сбора требований до сдачи в эксплуатацию. АПК «Безопасный город» для ГУ МЧС по Сахалинской области — руководитель проекта в классическом смысле: план этапов, сроки, бюджет, риски, координация распределённой команды 15 человек, прямая работа с заказчиком и силовыми ведомствами. Сдан за 8 месяцев в жёстких сроках, 1000+ камер, время реагирования экстренных служб сокращено на 30%; решение затем тиражировано на Рязанскую и Смоленскую области. ГИС «Инженерно-энергетический комплекс Санкт-Петербурга» для Комитета по энергетике — архитектор системы: команда 30 человек, 28 месяцев, 14 подсистем, время подготовки аналитических отчётов сокращено на 60%. Команды 10–30 человек.",
+        tags: ["Java", "UML", "BPMN", "ГИС", "PostgreSQL", "B2G"],
       },
       {
         period: "2014 - 2017",
-        role: "Руководитель направления",
+        role: "Руководитель направления разработки",
         company: "АйТи Энерджи Сервис",
         description:
-          "Управление ключевыми проектами компании: проектирование архитектуры и интерфейсов, разработка модели данных и функциональных модулей, формирование технических требований к новым продуктам.",
-        tags: ["Java", "ER", "SAP BO", "Oracle", "B2G"],
+          "Техническое руководство портфелем из 3–5 параллельных проектов одновременно. Слияние и трансформация команды 35 человек (АС СиОИ): объединил молодую команду новой очереди и «старую гвардию» — программистов со стажем 30+ лет, работавших на первой очереди. Организовал переобучение с Excel VBA на Java, Oracle APEX и SAP BusinessObjects и систему взаимного наставничества между поколениями. Сохранили 97% команды: ушёл один человек, на пенсию. Портал МДО для Минэнерго России — 15 000+ энергообъектов, время анализа данных сокращено на 40%, ML-прогноз аварийности, «Лучший ИТ-проект в ТЭК» 2016. Команды 15–40 человек.",
+        tags: ["Java", "SAP BO", "Oracle", "ML", "B2G"],
       },
       {
         period: "2011 - 2014",
-        role: "Тимлид Java",
+        role: "Тимлид Java / руководитель проекта",
         company: "АйТи Энерджи Сервис",
         description:
-          "Руководство командой разработчиков. Backend-разработка, техническое проектирование архитектуры, модели данных и интерфейсов. Анализ требований, подготовка постановок и отчётной документации по ГОСТ 34.",
-        tags: ["Java", "ER", "ГИС", "Oracle", "Agile", "JavaScript", "PL/SQL"],
+          "Портал мониторинга инвестиционных программ для Минэнерго России — руководитель проекта: планирование бюджета и сроков, формирование команды 10 человек, работа с заказчиком, контроль качества. Сдан за 8 месяцев. Руководство командой разработчиков, код-ревью, постановки на разработку. Backend-разработка на Java, Oracle (PL/SQL), техническое проектирование архитектуры, модели данных и интерфейсов. Анализ требований и отчётная документация по ГОСТ 34. Команды 5–10 человек.",
+        tags: ["Java", "Oracle", "PL/SQL", "ГИС", "Agile", "B2G"],
       },
     ],
   };
@@ -320,8 +345,8 @@ export function CV() {
             }
             description={
               language === "en"
-                ? "15 years in IT: business architecture, business analysis, BPM (Camunda/Flowable), AI process automation, Java/Kotlin. From government to fintech."
-                : "15 лет в IT: бизнес-архитектура, бизнес-анализ, BPM (Camunda/Flowable), AI-автоматизация процессов, Java/Kotlin. От Минэнерго до финтеха."
+                ? "15 years in IT, 14 leading teams: development management, delivery and estimation, architecture, code review, BPM (Camunda/Flowable), Java/Kotlin. From government to fintech."
+                : "15 лет в IT, 14 лет руководства командами: управление разработкой, delivery и оценка сроков, архитектура, код-ревью, BPM (Camunda/Flowable), Java/Kotlin. От Минэнерго до финтеха."
             }
           />
           <h1 className="text-4xl font-display font-bold mb-2">
@@ -329,8 +354,8 @@ export function CV() {
           </h1>
           <p className="text-slate-600 dark:text-slate-400">
             {language === "en"
-              ? "Lead Business Architect · Business Analyst · 15 years of engineering background"
-              : "Ведущий бизнес-архитектор · Бизнес-аналитик · 15 лет инженерного бэкграунда"}
+              ? "Head of Development · Full-cycle technical leader · Teams from 5 to 40 people"
+              : "Лидер разработки · Технический руководитель полного цикла · Команды от 5 до 40 человек"}
           </p>
         </div>
         <Button asChild className="bg-red-600 hover:bg-red-700 text-white">
@@ -443,13 +468,13 @@ export function CV() {
         <div className="text-center">
           <h3 className="text-2xl font-display font-bold mb-4">
             {language === "en"
-              ? "Interested in working together?"
-              : "Заинтересованы в сотрудничестве?"}
+              ? "Looking for a head of development?"
+              : "Ищете руководителя разработки?"}
           </h3>
           <p className="mb-6 opacity-90">
             {language === "en"
-              ? "Let's discuss how I can help your project succeed"
-              : "Давайте обсудим, как я могу помочь вашему проекту"}
+              ? "Describe the team and the task — I reply within 24 hours"
+              : "Опишите команду и задачу — отвечаю в течение 24 часов"}
           </p>
           <Button variant="secondary" size="lg" asChild>
             <a href="/contact">

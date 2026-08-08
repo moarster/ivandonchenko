@@ -69,8 +69,8 @@ export function Contact() {
         }
         description={
           language === "en"
-            ? "Get in touch with Ivan Donchenko — business architect and analyst based in Saint Petersburg. Telegram, email, LinkedIn, GitHub."
-            : "Связаться с Иваном Донченко — бизнес-архитектором и аналитиком из Санкт-Петербурга. Telegram, email, LinkedIn, GitHub."
+            ? "Get in touch with Ivan Donchenko — head of development and full-cycle technical leader based in Moscow. Telegram, email, LinkedIn, GitHub."
+            : "Связаться с Иваном Донченко — лидером разработки и техническим руководителем полного цикла из Москвы. Telegram, email, LinkedIn, GitHub."
         }
       />
       <div className="max-w-4xl mx-auto">
@@ -121,13 +121,13 @@ export function Contact() {
           </h2>
           <p className="text-slate-700 dark:text-slate-300 mb-4">
             {language === "en"
-              ? "Need to automate a process, untangle requirements and architecture, or bring AI into your operations? Describe the problem in your own words — no spec needed. I reply within 24 hours."
-              : "Нужно автоматизировать процесс, навести порядок в требованиях и архитектуре или встроить AI в работу компании? Опишите задачу своими словами — готовое ТЗ не нужно. Отвечаю в течение 24 часов."}
+              ? "Looking for a head of development who will take on the team, the deadlines, the architecture, and code review — and stay hands-on? Describe the team and the task in your own words. I reply within 24 hours."
+              : "Ищете руководителя разработки, который возьмёт на себя команду, сроки, архитектуру и код-ревью — и при этом останется hands-on? Опишите команду и задачу своими словами. Отвечаю в течение 24 часов."}
           </p>
           {/*          <p className="text-slate-600 dark:text-slate-400 text-sm">
             {language === "en"
-              ? "📍 Based in Saint-Petersburg, Russia"
-              : "📍 Живу в Санкт-Петербурге, Россия"}
+              ? "📍 Based in Moscow, Russia"
+              : "📍 Живу в Москве, Россия"}
           </p>*/}
         </Card>
       </div>

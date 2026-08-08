@@ -18,8 +18,8 @@ export function About() {
         }
         description={
           language === "en"
-            ? "Background, education, and interests of Ivan Donchenko — business architect and analyst from Saint Petersburg."
-            : "Опыт, образование и интересы Ивана Донченко — бизнес-архитектора и аналитика из Санкт-Петербурга."
+            ? "Background, education, and interests of Ivan Donchenko — head of development and full-cycle technical leader, based in Moscow."
+            : "Опыт, образование и интересы Ивана Донченко — лидера разработки и технического руководителя полного цикла из Москвы."
         }
       />
       <MarkdownRenderer content={content} />

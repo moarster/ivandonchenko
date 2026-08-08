@@ -10,14 +10,15 @@ interface SEOProps {
 
 const defaults = {
   en: {
-    title: "Ivan Donchenko — Business Architect · BPM & AI Process Automation",
+    title: "Ivan Donchenko — Head of Development · Full-cycle Technical Leader",
     description:
-      "Business architect and analyst with 15 years in IT. Business process automation (Camunda/Flowable), AI agents in workflows, integrations and data — from analysis to production.",
+      "Technical leader who owns the whole vertical: client, requirements, architecture, estimation, releases, people and code review — and writes code. 15 years in IT, 14 leading teams of 5 to 40 people.",
   },
   ru: {
-    title: "Иван Донченко — Бизнес-архитектор · Автоматизация бизнес-процессов",
+    title:
+      "Иван Донченко — Лидер разработки · Технический руководитель полного цикла",
     description:
-      "Бизнес-архитектор и аналитик с 15-летним инженерным бэкграундом. Автоматизация процессов на Camunda/Flowable, AI-агенты в бизнес-процессах, интеграции и данные.",
+      "Технический руководитель, который закрывает всю вертикаль: заказчик, требования, архитектура, оценка, релизы, люди и код-ревью — и сам пишет код. 15 лет в IT, 14 лет руководства командами от 5 до 40 человек.",
   },
 };
 

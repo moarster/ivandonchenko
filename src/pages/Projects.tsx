@@ -17,8 +17,8 @@ export function Projects() {
           : "Кредитный конвейер для финтеха",
       description:
         language === "en"
-          ? "Led the development of a BPM platform on Flowable 8/Kotlin: 6.7→8 upgrade, E2E test platform."
-          : "Руководство разработкой BPM-платформы на Flowable 8/Kotlin: апгрейд с 6.7, платформа E2E автотестов.",
+          ? "Leading the development: planning, estimation, code review. Flowable 8/Kotlin, engine upgrade from 6.7."
+          : "Руководство разработкой: планирование, оценка сроков, код-ревью. Flowable 8/Kotlin, апгрейд с 6.7.",
       datePeriod: "2026-02-01 - 2026-07-01",
       image: "/images/projects/loan-pipeline.card.svg",
       tags: ["Flowable 8", "Kotlin", "BPMN", "Testcontainers"],
@@ -43,8 +43,8 @@ export function Projects() {
           : "AI-обработка обращений в поддержке",
       description:
         language === "en"
-          ? "BPMN processes with LLM agents on Camunda 8 handle first-line tickets of an international booking service."
-          : "BPMN-процессы с LLM-агентами на Camunda 8 обрабатывают обращения первой линии сервиса бронирования жилья.",
+          ? "Coordination with the product side and the client’s support. Production BPMN processes with LLM agents on Camunda 8."
+          : "Координация с продуктом и поддержкой заказчика. Промышленные BPMN-процессы с LLM-агентами на Camunda 8.",
       datePeriod: "2025-10-01 - 2025-12-25",
       image: "/images/projects/ai-support.card.svg",
       tags: ["Camunda 8", "Zeebe", "LLM", "Java", "Python"],
@@ -57,8 +57,8 @@ export function Projects() {
           : "4000+ пользователей в 85 регионах",
       description:
         language === "en"
-          ? "Digital platform of the Russian Football Union built on Soarse. Global CIO Project of the Year 2021."
-          : "Цифровая платформа Российского футбольного союза на базе Soarse. «Проект года» Global CIO 2021.",
+          ? "Digital platform of the Russian Football Union on Soarse. Role: CTO, team of 20. Global CIO Project of the Year 2021."
+          : "Цифровая платформа РФС на базе Soarse. Роль: CTO, команда 20 человек. «Проект года» Global CIO 2021.",
       datePeriod: "2020-09-01 - 2021-06-21",
       image: "/images/projects/rfs.card.webp",
       tags: ["Microservices", "MDM", "Low-Code"],
@@ -71,8 +71,8 @@ export function Projects() {
           : "Правовая статистика для Генпрокуратуры РФ",
       description:
         language === "en"
-          ? "MDM & metadata subsystem of the GAS PS Portal: plugin architecture, JSON JOINs via RDF (Apache Jena), 16 months."
-          : "Подсистема НСИ и метаданных Портала ГАС ПС: плагинная архитектура, JOIN по JSON через RDF (Apache Jena), 16 месяцев.",
+          ? "MDM & metadata subsystem of the GAS PS Portal: 16 months, data from 85 regions. Role: CTO and chief architect."
+          : "Подсистема НСИ и метаданных Портала ГАС ПС: 16 месяцев, данные из 85 субъектов. Роль: CTO и главный архитектор.",
       datePeriod: "2021-10-15 - 2023-01-31",
       image: "/images/projects/gas-ps.card.webp",
       tags: ["B2G", "Microservices", "MDM", "Low-Code"],
@@ -85,8 +85,8 @@ export function Projects() {
           : "Свой Low-Code продукт: от идеи до госконтрактов",
       description:
         language === "en"
-          ? "CEO & Chief Architect (2020–2023): a platform of 5 builders, team of 15+, 2 government contracts delivered on top of it."
-          : "CEO и главный архитектор (2020–2023): платформа из 5 конструкторов, команда 15+, 2 госконтракта на её базе.",
+          ? "CTO & CEO (2020–2023): team built from zero to 20 people, a platform of 5 builders, 2 government contracts delivered on top of it."
+          : "CTO и генеральный директор (2020–2023): команда с нуля до 20 человек, платформа из 5 конструкторов, 2 госконтракта на её базе.",
       datePeriod: "2020-01-01 - 2023-02-20",
       image: "/images/projects/soarse.card.webp",
       tags: ["Low-Code", "BPM", "MDM", "Spring Cloud", "React"],
@@ -127,8 +127,8 @@ export function Projects() {
           : "Трансформация команды из 35 человек — без потерь",
       description:
         language === "en"
-          ? "AS SIOI for the Ministry of Energy: technology shift with 97% of the team retained. The “Old Guard” story is in the blog."
-          : "АС СиОИ для Минэнерго: смена технологий с сохранением 97% команды. История «Старой Гвардии» — в блоге.",
+          ? "Ministry of Energy: merged two teams into one of 35, changed the stack, kept 97%. The “Old Guard” story is in the blog."
+          : "Минэнерго: объединил два коллектива в 35 человек, сменил стек, сохранил 97%. История «Старой Гвардии» — в блоге.",
       datePeriod: "2013-12-01 - 2017-02-28",
       image: "/images/projects/as-sioi.card.webp",
       tags: ["Java", "Oracle", "SAP BO", "Data Engineering"],
@@ -141,8 +141,8 @@ export function Projects() {
           : "−40% времени на анализ данных",
       description:
         language === "en"
-          ? "MDO Portal for the Ministry of Energy: 15,000+ energy facilities, ML-based failure prediction. Best IT Project in Fuel & Energy 2016."
-          : "Портал МДО для Минэнерго России: 15 000+ энергообъектов, ML-прогноз аварийности. «Лучший ИТ-проект в ТЭК» 2016.",
+          ? "15,000+ energy facilities, ML forecasting. Role: head of development. Best IT Project in Fuel & Energy 2016."
+          : "15 000+ энергообъектов Минэнерго, ML-прогноз. Руководитель направления. «Лучший ИТ-проект в ТЭК» 2016.",
       datePeriod: "2012-01-01 - 2017-02-21",
       image: "/images/projects/portal-mdo.card.webp",
       tags:
@@ -158,8 +158,8 @@ export function Projects() {
           : "Портал МИП — первый enterprise",
       description:
         language === "en"
-          ? "Investment program monitoring portal for the energy sector — where it all began (2011)."
-          : "Портал мониторинга инвестиционных программ в электроэнергетике — с него всё началось (2011).",
+          ? "Ministry of Energy. First time as project manager: team of 10, delivered in 8 months."
+          : "Минэнерго, мониторинг инвестпрограмм. Первый раз руководителем проекта: команда 10, сдан за 8 месяцев.",
       datePeriod: "2011-07-01 - 2012-02-28",
       image: "/images/projects/portal-mip.card.webp",
       tags: ["Java", "Oracle", "WebLogic", "JavaScript"],
@@ -176,8 +176,8 @@ export function Projects() {
         }
         description={
           language === "en"
-            ? "Case studies with measurable outcomes: AI-powered support, loan origination for fintech, Safe City, Ministry of Energy portal, RFU platform."
-            : "Кейсы с измеримым результатом: AI в поддержке, кредитный конвейер для финтеха, Безопасный город, портал Минэнерго, ИС РФС."
+            ? "Projects with measurable outcomes, team sizes, and my role in each: Safe City for EMERCOM, Ministry of Energy portals, the RFU platform, loan origination for a fintech, AI in support."
+            : "Проекты с измеримым результатом, размером команды и моей ролью: «Безопасный город» для МЧС, порталы Минэнерго, платформа РФС, кредитный конвейер для финтеха, AI в поддержке."
         }
       />
       <div className="max-w-6xl mx-auto">

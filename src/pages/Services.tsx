@@ -18,129 +18,128 @@ interface Service {
 const services: Record<"en" | "ru", Service[]> = {
   en: [
     {
-      title: "Business Process Automation (BPM)",
-      subtitle: "From process map to working system",
+      title: "Head of development, in-house",
+      subtitle: "The main format",
       description:
-        "Requests live in email and spreadsheets, and nobody knows where the process is stuck? I map the process, model it in BPMN, deploy Camunda or Flowable, and take it to a working system: integrations, error handling, monitoring.",
+        "I take the team and the result as a whole: people, deadlines, architecture, code review — and I write code myself. Needed where there is one cross-functional team, or several track leads with nobody above them holding the overall result.",
       highlights: [
-        "Process discovery and BPMN/DMN modeling",
-        "Camunda & Flowable implementation, 7→8 migrations",
-        "Integrations, error handling, monitoring",
-        "5 years of Camunda in production",
+        "Hiring, onboarding, 1:1s, grades, mentoring, retention",
+        "Breakdown, effort and schedule estimation together with the team",
+        "Sprints and releases, backlog and roadmap, risks and escalation",
+        "Code review, standards and quality gates, tech debt",
+        "Direct work with the client and product owner, acceptance, demos, presales",
       ],
       caseNote:
-        "Recent case: a loan origination pipeline for a fintech on Flowable 8 — led the development.",
-      tags: ["Camunda 7/8", "Flowable", "BPMN", "DMN", "Kotlin/Java"],
+        "Teams from 5 to 40 people: head of a development division with a portfolio of 3–5 parallel projects, CTO of a product startup, full-cycle project manager.",
+      tags: ["Java/Kotlin", "Agile / Scrum", "Code review", "Roadmap", "1:1"],
     },
     {
-      title: "AI in Business Processes",
-      subtitle: "LLM agents embedded in workflows",
+      title: "Tech lead on a project",
+      subtitle: "Part-time or for the duration of the project",
       description:
-        "Your team reads emails, requests, and contracts by hand? I embed LLMs (ChatGPT, Claude, Gemini, local models) directly into the process: request classification and routing, document analysis, response drafting. Economics first, then implementation.",
+        "The project exists, the technical leader does not: nobody breaks the work down, estimates the schedule, or answers to the client for the result. I take that role — part-time or for the length of the project.",
       highlights: [
-        "Request classification and routing",
-        "Document analysis and response drafting",
-        "AI agents inside BPMN processes (Camunda 8)",
-        "ROI estimate before implementation",
+        "Task definition and progress control",
+        "Effort and schedule estimation, release plan",
+        "Review of the team’s architecture and code decisions",
+        "Reporting and demos to the client",
       ],
       caseNote:
-        "Production case: AI-powered ticket handling for the first-line support of an international booking service — BPMN processes with LLM agents on Camunda 8.",
-      tags: ["LLM", "ChatGPT / Claude / Gemini", "Local models", "Camunda 8"],
+        "The current format since October 2025: three parallel projects in three domains — fintech, first-line support of an international booking service, a corporate data warehouse.",
+      tags: ["Tech Lead", "Estimation", "BPMN", "C4 / ADR"],
     },
     {
-      title: "Business Analysis & Architecture",
-      subtitle: "Requirements, audit, transformation",
+      title: "Team and delivery audit",
+      subtitle: "When releases slip and estimates never match reality",
       description:
-        "A project stalls because business and engineering don’t speak the same language? I elicit and structure requirements, design the solution, and document it so both management and developers understand it — even a year later.",
+        "Releases slip, estimates don’t match the actuals, quality rests on a few heroes? I look at how the team works today and set up the process: breakdown, estimation, quality gates, CI/CD, and an objective basis for the conversation about grades.",
       highlights: [
-        "Requirements elicitation and structuring",
-        "Architecture and process audit",
-        "Transformation roadmap without stopping the business",
-        "Pre-investment due diligence",
-        "Documentation that lasts: C4, ADR",
-      ],
-      tags: ["BPMN", "C4", "ADR", "Arc42", "UML"],
-    },
-    {
-      title: "Data & Integrations",
-      subtitle: "ETL, dashboards, a single source of truth",
-      description:
-        "Data entered twice, reports assembled by hand? I connect CRM, ERP, 1C, and government services, build ETL and dashboards. If a simple script solves it, I won’t drag in a heavy platform.",
-      highlights: [
-        "System integration (CRM, ERP, 1C, government services)",
-        "ETL pipelines: Airflow, n8n, NiFi",
-        "Dashboards: Grafana, Metabase",
-        "Data migration with transformation",
+        "Audit of development processes and tech debt",
+        "A methodology for assessing actual developer effort using neural networks",
+        "Quality gates, CI/CD, codebase standards",
+        "Standardising several teams: service templates, SLAs between teams, API-first contracts",
       ],
       caseNote:
-        "Recent case: a corporate data lake with ETL from four business systems.",
-      tags: ["Airflow", "n8n", "NiFi", "PostgreSQL", "Grafana", "Metabase"],
+        "The effort assessment methodology was built and applied on the loan origination project. Standards for product teams — Solvo, the WMS/YMS platform track.",
+      tags: ["Quality gates", "GitLab CI/CD", "OpenAPI", "Assessment"],
+    },
+    {
+      title: "Architecture and BPM development",
+      subtitle: "Designed and taken to production",
+      description:
+        "You need architecture for a new product, or process automation on a BPM engine. I design it and take it to production: BPMN processes, integrations, error handling, monitoring, and documentation that still makes sense a year later.",
+      highlights: [
+        "Camunda 7/8 and Flowable: 5 years of Camunda in production, engine migrations",
+        "Microservices on Spring Boot/Cloud, REST and gRPC, event-driven, DDD",
+        "LLM agents inside BPMN processes — in production, not in a pilot",
+        "C4, ADR, Structurizr; contract and e2e tests on Testcontainers",
+      ],
+      caseNote:
+        "Loan origination pipeline on Flowable 8/Kotlin: engine upgrade from 6.7 without stopping the business. First-line support of an international booking service: BPMN processes with LLM agents on Camunda 8.",
+      tags: ["Camunda 7/8", "Flowable", "BPMN", "Spring Boot", "LLM"],
     },
   ],
   ru: [
     {
-      title: "Автоматизация бизнес-процессов (BPM)",
-      subtitle: "От схемы процесса до работающей системы",
+      title: "Руководитель разработки в штат",
+      subtitle: "Основной формат",
       description:
-        "Заявки живут в почте и Excel, и никто не знает, где застрял процесс? Разберу процесс, смоделирую его в BPMN, внедрю Camunda или Flowable и доведу до работающей системы: интеграции, обработка ошибок, мониторинг.",
+        "Беру команду и результат целиком: люди, сроки, архитектура, код-ревью — и сам пишу код. Нужен там, где команда одна и кросс-функциональная, или где есть тимлиды направлений, а над ними некому держать общий результат.",
       highlights: [
-        "Анализ процесса и моделирование BPMN/DMN",
-        "Внедрение Camunda и Flowable, миграции 7→8",
-        "Интеграции, обработка ошибок, мониторинг",
-        "5 лет Camunda в production",
+        "Наём, онбординг, 1:1, грейды, менторинг, удержание",
+        "Декомпозиция, оценка трудоёмкости и сроков вместе с командой",
+        "Спринты и релизы, бэклог и roadmap, риски и эскалация",
+        "Код-ревью, стандарты и quality gates, работа с техдолгом",
+        "Прямая работа с заказчиком и product owner, приёмка, демо, пресейл",
       ],
       caseNote:
-        "Свежий кейс: кредитный конвейер для финтеха на Flowable 8 — руководил разработкой.",
-      tags: ["Camunda 7/8", "Flowable", "BPMN", "DMN", "Kotlin/Java"],
+        "Команды от 5 до 40 человек: руководитель направления разработки с портфелем из 3–5 параллельных проектов, CTO продуктового стартапа, руководитель проектов полного цикла.",
+      tags: ["Java/Kotlin", "Agile / Scrum", "Код-ревью", "Roadmap", "1:1"],
     },
     {
-      title: "AI в бизнес-процессах",
-      subtitle: "LLM-агенты внутри процессов",
+      title: "Tech Lead на проект",
+      subtitle: "Частичная занятость или на срок проекта",
       description:
-        "Сотрудники вручную читают письма, заявки и договоры? Встрою LLM (ChatGPT, Claude, Gemini, локальные модели) прямо в процесс: классификация и маршрутизация обращений, разбор документов, подготовка ответов. Сначала считаем экономику, потом внедряем.",
+        "Проект есть, технического руководителя нет: некому декомпозировать работу, оценить сроки и отвечать за результат перед заказчиком. Беру эту роль — на part-time или на время проекта.",
       highlights: [
-        "Классификация и маршрутизация обращений",
-        "Разбор документов и подготовка ответов",
-        "AI-агенты внутри BPMN-процессов (Camunda 8)",
-        "Оценка экономики до внедрения",
+        "Постановка задач и контроль хода работ",
+        "Оценка трудоёмкости и сроков, релизный план",
+        "Ревью архитектурных и кодовых решений команды",
+        "Отчётность и демонстрации заказчику",
       ],
       caseNote:
-        "Боевой кейс: AI-обработка обращений первой линии поддержки международного сервиса бронирования — BPMN-процессы с LLM-агентами на Camunda 8.",
-      tags: [
-        "LLM",
-        "ChatGPT / Claude / Gemini",
-        "Локальные модели",
-        "Camunda 8",
-      ],
+        "Текущий формат с октября 2025: три параллельных проекта в трёх доменах — финтех, первая линия поддержки международного сервиса бронирования, корпоративное хранилище данных.",
+      tags: ["Tech Lead", "Оценка сроков", "BPMN", "C4 / ADR"],
     },
     {
-      title: "Бизнес-анализ и архитектура",
-      subtitle: "Требования, аудит, трансформация",
+      title: "Аудит команды и постановка delivery",
+      subtitle: "Когда релизы срываются, а оценки не сходятся с фактом",
       description:
-        "Проект буксует, потому что бизнес и разработка говорят на разных языках? Сниму и структурирую требования, спроектирую решение и задокументирую так, что будет понятно и менеджменту, и разработчикам — даже через год.",
+        "Релизы срываются, оценки не сходятся с фактом, качество держится на нескольких героях? Разбираю, как команда работает сейчас, и ставлю процесс: декомпозиция, оценка, quality gates, CI/CD и объективная база для разговора о грейдах.",
       highlights: [
-        "Снятие и структурирование требований",
-        "Аудит архитектуры и процессов",
-        "План трансформации без остановки бизнеса",
-        "Due diligence перед инвестициями",
-        "Документация, которая живёт: C4, ADR",
-      ],
-      tags: ["BPMN", "C4", "ADR", "Arc42", "UML"],
-    },
-    {
-      title: "Данные и интеграции",
-      subtitle: "ETL, дашборды, единый источник правды",
-      description:
-        "Данные вводятся дважды, отчёты собираются руками? Свяжу CRM, ERP, 1С и госсервисы, построю ETL и дашборды. Если задача решается простым скриптом — не буду тащить тяжёлую платформу.",
-      highlights: [
-        "Интеграция систем (CRM, ERP, 1С, госсервисы)",
-        "ETL-пайплайны: Airflow, n8n, NiFi",
-        "Дашборды: Grafana, Metabase",
-        "Миграция данных с трансформацией",
+        "Аудит процессов разработки и техдолга",
+        "Методика оценки фактических трудозатрат разработчиков с применением нейросетей",
+        "Quality gates, CI/CD, стандарты кодовой базы",
+        "Стандартизация работы нескольких команд: шаблоны сервисов, SLA между командами, API-first",
       ],
       caseNote:
-        "Свежий кейс: корпоративный Data Lake — ETL из Bitrix24, ПланФакт, CallTouch и 1С.",
-      tags: ["Airflow", "n8n", "NiFi", "PostgreSQL", "Grafana", "Metabase"],
+        "Методика оценки трудозатрат разработана и применена на проекте кредитного конвейера. Стандарты для продуктовых команд — Solvo, платформенное направление WMS/YMS.",
+      tags: ["Quality gates", "GitLab CI/CD", "OpenAPI", "Assessment"],
+    },
+    {
+      title: "Архитектура и BPM-разработка",
+      subtitle: "Спроектировать и довести до эксплуатации",
+      description:
+        "Нужна архитектура под новый продукт или автоматизация процессов на BPM-движке. Проектирую и довожу до промышленной эксплуатации: BPMN-процессы, интеграции, обработка ошибок, мониторинг и документация, которая понятна и через год.",
+      highlights: [
+        "Camunda 7/8 и Flowable: 5 лет Camunda в production, миграции движков",
+        "Микросервисы на Spring Boot/Cloud, REST и gRPC, event-driven, DDD",
+        "LLM-агенты внутри BPMN-процессов — в промышленной эксплуатации, не в пилоте",
+        "C4, ADR, Structurizr; контрактные и e2e-тесты на Testcontainers",
+      ],
+      caseNote:
+        "Кредитный конвейер на Flowable 8/Kotlin: апгрейд движка с 6.7 без остановки бизнеса. Первая линия поддержки международного сервиса бронирования: BPMN-процессы с LLM-агентами на Camunda 8.",
+      tags: ["Camunda 7/8", "Flowable", "BPMN", "Spring Boot", "LLM"],
     },
   ],
 };
@@ -154,23 +153,23 @@ export function Services() {
       <SEO
         title={
           language === "en"
-            ? "Services — Ivan Donchenko"
-            : "Услуги — Иван Донченко"
+            ? "Engagement formats — Ivan Donchenko"
+            : "Форматы работы — Иван Донченко"
         }
         description={
           language === "en"
-            ? "Camunda/Flowable business process automation, AI/LLM agents in workflows, business analysis, architecture audit, integrations and ETL."
-            : "Автоматизация бизнес-процессов на Camunda/Flowable, AI и LLM-агенты в процессах, бизнес-анализ, аудит архитектуры, интеграции и ETL."
+            ? "Head of development in-house, tech lead on a project, team and delivery audit, architecture and BPM development on Camunda/Flowable."
+            : "Руководитель разработки в штат, Tech Lead на проект, аудит команды и постановка delivery, архитектура и BPM-разработка на Camunda/Flowable."
         }
       />
       <div className="max-w-6xl mx-auto">
         <h1 className="text-4xl font-display font-bold mb-4">
-          {language === "en" ? "Services" : "Услуги"}
+          {language === "en" ? "Engagement formats" : "Форматы работы"}
         </h1>
         <p className="text-xl text-slate-600 dark:text-slate-400 mb-12">
           {language === "en"
-            ? "I help businesses automate processes and bring order to their systems — with AI where it pays off, and without it where a simple script will do."
-            : "Помогаю бизнесу автоматизировать процессы и наводить порядок в системах — с нейросетями там, где они дают эффект, и без них там, где хватает простого скрипта."}
+            ? "The main format is head of development, in-house: the team, the deadlines, the architecture, and code review are mine. The formats below are for cases where that role is needed part-time or only for the length of a project."
+            : "Основной формат — руководитель разработки в штат: команда, сроки, архитектура и код-ревью на мне. Форматы ниже — для случаев, когда эта роль нужна частично или только на время проекта."}
         </p>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -220,19 +219,21 @@ export function Services() {
 
         <p className="mt-12 text-slate-500 dark:text-slate-400 text-center max-w-3xl mx-auto">
           {language === "en"
-            ? "What I don’t do: “just a Java senior” staff augmentation, template websites, bots-for-hire. My value is the bundle: analysis + architecture + delivery."
-            : "Чем я не занимаюсь: аутстафф «просто Java-сеньором», типовые сайты и боты. Моя ценность — связка: анализ + архитектура + внедрение."}
+            ? "Where I don’t fit: pure senior-IC positions without a team, and hiring processes gated on live coding. Where I show best: walking through an architecture case, reviewing someone else’s solution, and talking about how I ran a specific project and specific people."
+            : "Куда я не подхожу: чистые senior-IC позиции без команды и отбор через лайвкодинг. Формат, где меня видно: разбор архитектурного кейса, ревью чужого решения и разговор о том, как я вёл конкретный проект и конкретных людей."}
         </p>
 
         <Card className="mt-12 p-8 bg-linear-to-r from-primary-500 to-primary-600 text-white border-0">
           <div className="text-center">
             <h3 className="text-2xl font-display font-bold mb-4">
-              {language === "en" ? "Have a task in mind?" : "Есть задача?"}
+              {language === "en"
+                ? "Looking for a head of development?"
+                : "Ищете руководителя разработки?"}
             </h3>
             <p className="mb-6 opacity-90">
               {language === "en"
-                ? "Describe it in your own words — I’ll suggest the best approach and estimate the timeline"
-                : "Опишите её своими словами — подскажу оптимальный подход и оценю сроки"}
+                ? "Describe the team and the task — I’ll tell you where I would be useful and where I would not"
+                : "Опишите команду и задачу — расскажу, где я буду полезен, а где нет"}
             </p>
             <Button variant="secondary" size="lg" asChild>
               <Link to={localePath("/contact")}>
