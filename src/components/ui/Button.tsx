@@ -1,4 +1,4 @@
-import type { ButtonHTMLAttributes, ReactNode } from "react";
+import type { ButtonHTMLAttributes, ReactElement, ReactNode } from "react";
 import { cloneElement, forwardRef, isValidElement } from "react";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -42,12 +42,14 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
     if (asChild && isValidElement(children)) {
       // Clone the child element and merge props
-      const childProps = children.props as any;
-      return cloneElement(children, {
+      const child = children as ReactElement<Record<string, unknown>>;
+      const childClassName =
+        typeof child.props.className === "string" ? child.props.className : "";
+      return cloneElement(child, {
         ...props,
-        className: `${childProps.className || ""} ${classes}`.trim(),
+        className: `${childClassName} ${classes}`.trim(),
         ref,
-      } as any);
+      });
     }
 
     return (

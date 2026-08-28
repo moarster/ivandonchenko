@@ -1,0 +1,21 @@
+#!/bin/sh
+# Runs the same checks as CI before anything leaves the machine.
+# Installed via `git config core.hooksPath .githooks` (see the "prepare" script).
+# Skip once with: git push --no-verify
+
+set -e
+
+echo "pre-push: biome check"
+if ! pnpm lint; then
+  echo ""
+  echo "Lint failed. Fix with:  pnpm exec biome check --write ."
+  echo "Then amend or add a commit and push again."
+  exit 1
+fi
+
+echo "pre-push: tsc + vite build"
+if ! pnpm build; then
+  echo ""
+  echo "Build failed. Push aborted."
+  exit 1
+fi
