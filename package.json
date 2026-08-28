@@ -9,7 +9,7 @@
     "lint": "biome check .",
     "format": "biome format --write .",
     "preview": "vite preview",
-    "prepare": "git config core.hooksPath .githooks"
+    "prepare": "git config core.hooksPath .githooks || true"
   },
   "dependencies": {
     "react": "^19.2.8",
