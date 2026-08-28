@@ -193,7 +193,7 @@ html {
 /* Lyrical asides: a whole paragraph set in italics, written as
    `<p><em>...</em></p>` so it stays portable to Habr and friends. Tinted to
    read as a step aside from the main narration. */
-.markdown-content p:has(> em:only-child) {
+.markdown-content p.lyrical-aside {
   @apply bg-primary-50/70 dark:bg-slate-800/60 rounded-lg px-5 py-4 my-6 font-serif text-slate-600 dark:text-slate-400;
 }
 
