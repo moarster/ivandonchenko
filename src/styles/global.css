@@ -189,3 +189,45 @@ html {
 .markdown-content em {
   @apply italic;
 }
+
+/* Lyrical asides: a whole paragraph set in italics, written as
+   `<p><em>...</em></p>` so it stays portable to Habr and friends. Tinted to
+   read as a step aside from the main narration. */
+.markdown-content p:has(> em:only-child) {
+  @apply bg-primary-50/70 dark:bg-slate-800/60 rounded-lg px-5 py-4 my-6 font-serif text-slate-600 dark:text-slate-400;
+}
+
+/* Collapsible side notes */
+.markdown-content details {
+  @apply bg-slate-100 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 rounded-lg px-5 py-3 my-6;
+}
+
+.markdown-content summary {
+  @apply cursor-pointer font-semibold text-slate-900 dark:text-slate-100 marker:text-primary-500;
+}
+
+.markdown-content details[open] summary {
+  @apply mb-3;
+}
+
+.markdown-content details > *:last-child {
+  @apply mb-0;
+}
+
+/* GFM footnotes */
+.markdown-content sup a {
+  @apply no-underline px-0.5;
+}
+
+.markdown-content .footnotes {
+  @apply mt-8 text-sm text-slate-600 dark:text-slate-400;
+}
+
+/* remark-gfm emits an English "Footnotes" heading meant for screen readers. */
+.markdown-content .footnotes h2 {
+  @apply sr-only;
+}
+
+.markdown-content .footnotes p {
+  @apply mb-1;
+}

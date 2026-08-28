@@ -39,8 +39,11 @@ const defaultModules = import.meta.glob("/src/content/blog/*/index.md", {
 // Article-local images live in the submodule next to the markdown. Importing
 // them as assets lets Vite emit them with hashed URLs instead of 404ing on the
 // relative path the browser would otherwise resolve against the page route.
+// Only web-delivery formats are matched: the eager glob emits everything it
+// matches, so listing PNG/JPEG here would ship the heavy editing originals that
+// articles keep next to their exported images. Reference webp/svg in markdown.
 const imageModules = import.meta.glob(
-  "/src/content/blog/**/*.{png,jpg,jpeg,gif,webp,svg,avif}",
+  "/src/content/blog/**/*.{webp,svg,avif}",
   { import: "default", eager: true },
 ) as Record<string, string>;
 
@@ -138,15 +141,14 @@ function toPost(slug: string, raw: string): BlogPost {
 
   let body = content;
   let title = typeof data.title === "string" ? data.title : "";
-  if (!title) {
-    const extracted = extractTitle(body);
-    if (extracted) {
-      title = extracted.title;
-      body = extracted.body;
-    } else {
-      title = slug;
-    }
+  // The leading H1 is always dropped: the page renders the title itself, so
+  // leaving it in the body would show it twice.
+  const extracted = extractTitle(body);
+  if (extracted) {
+    body = extracted.body;
+    if (!title) title = extracted.title;
   }
+  if (!title) title = slug;
 
   const description =
     typeof data.description === "string" && data.description
