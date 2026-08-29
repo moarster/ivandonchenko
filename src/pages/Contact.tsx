@@ -55,7 +55,7 @@ export function Contact() {
       icon: <FiFileText className="w-6 h-6" />,
       label: "HeadHunter",
       value: language === "en" ? "My Resume" : "Моё резюме",
-      href: "https://spb.hh.ru/resume/32ac5478ff0fc1f7e30039ed1f4d71624c3742",
+      href: "https://hh.ru/resume/2dff6faeff0cde804d0039ed1f4b3074475038",
     },
   ];
 

@@ -13,10 +13,7 @@ interface LanguageContextType {
 const translations: Record<Language, Record<string, string>> = {
   en: {
     home: "Home",
-    about: "About Me",
     cv: "CV",
-    projects: "Projects",
-    services: "Formats",
     blog: "Blog",
     blogSubtitle:
       "On teams, deadlines, and the systems they build — and on how AI is changing engineering work. Real cases, no tutorials.",
@@ -26,20 +23,14 @@ const translations: Record<Language, Record<string, string>> = {
     noPosts: "No posts yet",
     contact: "Contact",
     readMore: "Read more",
-    allProjects: "All Projects",
-    viewDetails: "View Details",
     getInTouch: "Get in Touch",
-    basedIn: "Based in",
     discussCase: "Discuss an opportunity",
-    seeCases: "See the projects",
+    seeCv: "See the CV",
     reply24h: "I reply within 24 hours",
   },
   ru: {
     home: "Главная",
-    about: "Обо мне",
     cv: "Резюме",
-    projects: "Проекты",
-    services: "Форматы",
     blog: "Блог",
     blogSubtitle:
       "О командах, сроках и системах, которые они создают, — и о том, как нейросети меняют инженерную работу. Реальные кейсы, без туториалов.",
@@ -49,12 +40,9 @@ const translations: Record<Language, Record<string, string>> = {
     noPosts: "Пока нет статей",
     contact: "Контакты",
     readMore: "Читать далее",
-    allProjects: "Все проекты",
-    viewDetails: "Подробнее",
     getInTouch: "Связаться",
-    basedIn: "Базируюсь в",
     discussCase: "Обсудить сотрудничество",
-    seeCases: "Смотреть проекты",
+    seeCv: "Смотреть резюме",
     reply24h: "Отвечаю в течение 24 часов",
   },
 };
