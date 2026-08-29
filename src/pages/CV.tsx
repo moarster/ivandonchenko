@@ -15,6 +15,7 @@ import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { TagList } from "@/components/ui/TagList.tsx";
 import { useLanguage } from "@/hooks/useLanguage";
+import { pageMeta } from "@/utils/seo";
 
 const HHIcon = () => (
   <svg
@@ -74,8 +75,6 @@ export function CV() {
         "As a manager, I understand the trade-off between doing it beautifully and correctly and doing it on time and on budget. I mitigate circumstances, risks, commitments and opportunities.",
         "As a representative of the company, I will find common ground with any customer, both in terms of level and of character. I am a good speaker, I have presentation skills and, why hide it, charisma. The experience varies: from a report to the Minister of Energy to defending a product from the podium at the Prosecutor General's Office.",
       ],
-      // formula:
-      //   "15 years in IT · 14 years leading teams · 14 years hands-on in Java/Kotlin · 7 years of architecture · English C1",
       domainsTitle: "Expertise Across System Classes",
       domains: ["BPM", "MDM", "GIS", "WMS/YMS", "DWH & BI", "Low/No-code"],
     },
@@ -89,8 +88,6 @@ export function CV() {
         "Как менеджер, понимаю компромисс между «сделать красиво и правильно» и «сделать в срок и в бюджет». Митигирую обстоятельства, риски, обязательства и возможности.",
         "Как представитель компании, найду общий язык с любым заказчиком — и по уровню, и по характеру. Хорошо подвешен язык, есть навыки презентации и, что уж скрывать, харизма. Опыт разный: от доклада министру энергетики до защиты продукта с трибуны в Генеральной прокуратуре.",
       ],
-      // formula:
-      //   "15 лет в IT · 14 лет руководства командами · 14 лет разработки на Java/Kotlin · 7 лет архитектуры · английский C1",
       domainsTitle: "Экспертиза в классах систем",
       domains: ["BPM", "MDM", "ГИС", "WMS/YMS", "DWH и BI", "Low/No-code"],
     },
@@ -774,18 +771,7 @@ export function CV() {
       {/* Header */}
       <div className="flex justify-between items-center mb-12">
         <div>
-          <SEO
-            title={
-              language === "en"
-                ? "CV — Ivan Donchenko"
-                : "Резюме — Иван Донченко"
-            }
-            description={
-              language === "en"
-                ? "15 years in IT, 14 leading teams: development management, delivery and estimation, architecture, code review, BPM (Camunda/Flowable), Java/Kotlin. From government to fintech."
-                : "15 лет в IT, 14 лет руководства командами: управление разработкой, delivery и оценка сроков, архитектура, код-ревью, BPM (Camunda/Flowable), Java/Kotlin. От Минэнерго до финтеха."
-            }
-          />
+          <SEO {...pageMeta("/cv", language)} />
           <h1 className="text-4xl font-display font-bold mb-2">
             {language === "en" ? "Curriculum Vitae" : "Резюме"}
           </h1>

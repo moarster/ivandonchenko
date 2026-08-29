@@ -1,0 +1,42 @@
+{
+  "/": {
+    "ru": {
+      "title": "Иван Донченко — Лидер разработки, технический руководитель",
+      "description": "Технический руководитель полного цикла: заказчик, требования, архитектура, сроки, люди и код-ревью. 15 лет в IT, команды от 5 до 40 человек, Java и Kotlin."
+    },
+    "en": {
+      "title": "Ivan Donchenko — Head of Development & Technical Leader",
+      "description": "Full-cycle technical leader: client, requirements, architecture, deadlines, people and code review. 15 years in IT, teams from 5 to 40 people, Java and Kotlin."
+    }
+  },
+  "/cv": {
+    "ru": {
+      "title": "Резюме — Иван Донченко, лидер разработки",
+      "description": "15 лет в IT, руководство командами до 40 человек, BPM на Camunda и Flowable, Java и Kotlin. Минэнерго, Генпрокуратура, РФС, Лукойл, финтех."
+    },
+    "en": {
+      "title": "CV — Ivan Donchenko, Head of Development",
+      "description": "15 years in IT, leading teams of up to 40 people, BPM on Camunda and Flowable, Java and Kotlin. Government, energy, logistics and fintech systems."
+    }
+  },
+  "/blog": {
+    "ru": {
+      "title": "Блог — Иван Донченко",
+      "description": "О командах, сроках и системах, которые они создают, и о том, как нейросети меняют инженерную работу. Реальные кейсы, без туториалов."
+    },
+    "en": {
+      "title": "Blog — Ivan Donchenko",
+      "description": "On teams, deadlines, and the systems they build, and on how AI is changing engineering work. Real cases, no tutorials."
+    }
+  },
+  "/contact": {
+    "ru": {
+      "title": "Контакты — Иван Донченко",
+      "description": "Связаться с Иваном Донченко: Telegram, email, LinkedIn, GitHub, hh.ru. Отвечаю в течение 24 часов."
+    },
+    "en": {
+      "title": "Contact — Ivan Donchenko",
+      "description": "Get in touch with Ivan Donchenko: Telegram, email, LinkedIn, GitHub, hh.ru. I reply within 24 hours."
+    }
+  }
+}

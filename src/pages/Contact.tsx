@@ -4,6 +4,7 @@ import { SiHabr } from "react-icons/si";
 import { SEO } from "@/components/SEO";
 import { Card } from "@/components/ui/Card";
 import { useLanguage } from "@/hooks/useLanguage";
+import { pageMeta } from "@/utils/seo";
 
 export function Contact() {
   const { language } = useLanguage();
@@ -61,18 +62,7 @@ export function Contact() {
 
   return (
     <div className="container mx-auto px-4 py-12">
-      <SEO
-        title={
-          language === "en"
-            ? "Contact — Ivan Donchenko"
-            : "Контакты — Иван Донченко"
-        }
-        description={
-          language === "en"
-            ? "Get in touch with Ivan Donchenko — head of development and full-cycle technical leader based in Moscow. Telegram, email, LinkedIn, GitHub."
-            : "Связаться с Иваном Донченко — лидером разработки и техническим руководителем полного цикла из Москвы. Telegram, email, LinkedIn, GitHub."
-        }
-      />
+      <SEO {...pageMeta("/contact", language)} />
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-display font-bold mb-4">
           {language === "en" ? "Contact Me" : "Контакты"}

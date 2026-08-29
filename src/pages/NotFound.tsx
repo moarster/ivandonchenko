@@ -1,5 +1,6 @@
 import { HiHome } from "react-icons/hi";
 import { Link } from "react-router-dom";
+import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/Button";
 import { useLanguage } from "@/hooks/useLanguage";
 
@@ -8,6 +9,10 @@ export function NotFound() {
 
   return (
     <div className="container mx-auto px-4 py-20 text-center">
+      <SEO
+        title={language === "en" ? "Page Not Found" : "Страница не найдена"}
+        noindex
+      />
       <h1 className="text-9xl font-display font-bold text-cinnabar-500 dark:text-cinnabar-400 mb-4">
         404
       </h1>

@@ -7,6 +7,7 @@ import { TagList } from "@/components/ui/TagList";
 import { useLanguage } from "@/hooks/useLanguage";
 import { getBlogPost } from "@/utils/blog";
 import { formatDate } from "@/utils/dateFormatter";
+import { blogPostJsonLd } from "@/utils/seo";
 
 export function BlogPost() {
   const { language, t, localePath } = useLanguage();
@@ -25,6 +26,7 @@ export function BlogPost() {
   if (!post) {
     return (
       <div className="container mx-auto px-4 py-12">
+        <SEO title={t("postNotFound")} noindex />
         <div className="max-w-3xl mx-auto">
           {backButton}
           <p className="text-slate-600 dark:text-slate-400">
@@ -38,9 +40,16 @@ export function BlogPost() {
   return (
     <div className="container mx-auto px-4 py-12">
       <SEO
-        title={`${post.title} — Ivan Donchenko`}
-        description={post.description}
+        title={`${post.title} — ${language === "en" ? "Ivan Donchenko" : "Иван Донченко"}`}
+        ogTitle={post.title}
+        description={post.seoDescription}
         type="article"
+        image={post.image || undefined}
+        canonical={post.canonical || undefined}
+        publishedTime={post.date}
+        modifiedTime={post.updated || post.date}
+        tags={post.tags}
+        jsonLd={blogPostJsonLd(language, post)}
       />
       <div className="max-w-3xl mx-auto">
         {backButton}

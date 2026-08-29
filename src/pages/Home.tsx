@@ -4,6 +4,7 @@ import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { useLanguage } from "@/hooks/useLanguage";
+import { pageMeta, personJsonLd } from "@/utils/seo";
 
 export function Home() {
   const { language, t, localePath } = useLanguage();
@@ -40,55 +41,47 @@ export function Home() {
 
   return (
     <div className="container mx-auto px-4 py-12">
-      <SEO
-        title={
-          language === "en"
-            ? "Ivan Donchenko — Head of Development · Full-cycle Technical Leader"
-            : "Иван Донченко — Лидер разработки · Технический руководитель полного цикла"
-        }
-        description={
-          language === "en" ? "Technical leader" : "Технический руководитель"
-        }
-      />
+      <SEO {...pageMeta("/", language)} jsonLd={personJsonLd(language)} />
       {/* Hero Section */}
-      <section className="text-center pt-20 pb-10">
-        <h1 className="text-5xl md:text-6xl font-display font-bold text-slate-900 dark:text-slate-50 mb-6">
-          {language === "en" ? "Head of Development" : "Лидер разработки"}
-        </h1>
-        <div className="mx-auto mb-6 h-1 w-20 rounded-full bg-cinnabar-500 dark:bg-cinnabar-400" />
-        <p className="text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-2xl mx-auto">
-          {language === "en"
-            ? "A technical lead capable of owning an entire area end-to-end — from sales and customer relations through requirements, architecture, delivery, people, development, testing, and support."
-            : "Технический руководитель, способный взять на себя задачи целого направление: продажи, заказчик, требования, архитектура, сроки, люди, разработка, тестирование, поддержка."}
-        </p>
-        <div className="flex gap-4 justify-center flex-wrap">
-          <Button size="lg" asChild>
-            <Link to={localePath("/contact")}>
-              {t("discussCase")}
-              <HiArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-          </Button>
-          <Button size="lg" variant="secondary" asChild>
-            <Link to={localePath("/cv")}>{t("seeCv")}</Link>
-          </Button>
+      <section className="grid items-center gap-10 pt-16 pb-10 md:grid-cols-[minmax(0,1fr)_auto] md:gap-14">
+        <div className="text-center md:text-left">
+          <h1 className="text-5xl md:text-6xl font-display font-bold text-slate-900 dark:text-slate-50 mb-6">
+            {language === "en" ? "Head of Development" : "Лидер разработки"}
+          </h1>
+          <div className="mx-auto md:mx-0 mb-6 h-1 w-20 rounded-full bg-cinnabar-500 dark:bg-cinnabar-400" />
+          <p className="text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-2xl mx-auto md:mx-0">
+            {language === "en"
+              ? "A technical lead capable of owning an entire area end-to-end — from sales and customer relations through requirements, architecture, delivery, people, development, testing, and support."
+              : "Технический руководитель, способный взять на себя задачи целого направление: продажи, заказчик, требования, архитектура, сроки, люди, разработка, тестирование, поддержка."}
+          </p>
+          <div className="flex gap-4 justify-center md:justify-start flex-wrap">
+            <Button size="lg" asChild>
+              <Link to={localePath("/contact")}>
+                {t("discussCase")}
+                <HiArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+            </Button>
+            <Button size="lg" variant="secondary" asChild>
+              <Link to={localePath("/cv")}>{t("seeCv")}</Link>
+            </Button>
+          </div>
+          <p className="mt-4 text-sm text-slate-500 dark:text-slate-500">
+            {t("reply24h")}
+          </p>
         </div>
-        <p className="mt-4 text-sm text-slate-500 dark:text-slate-500">
-          {t("reply24h")}
-        </p>
-      </section>
-
-      {/* Trust Bar */}
-      <section className="text-center pb-12">
-        <p className="text-sm text-slate-600 dark:text-slate-400 mb-2 max-w-3xl mx-auto">
-          {language === "en"
-            ? "Delivered for: Russian Ministry of Energy · Prosecutor General’s Office · Russian Football Union · Lukoil"
-            : "Проекты: Минэнерго России · Генпрокуратура РФ · РФС · Лукойл · МЧС"}
-        </p>
-        {/*<p className="text-sm text-slate-500 dark:text-slate-500">*/}
-        {/*  {language === "en"*/}
-        {/*    ? "Best IT Project in Fuel & Energy 2016 · Global CIO Project of the Year 2021"*/}
-        {/*    : "«Лучший ИТ-проект в ТЭК» 2016 · «Проект года» Global CIO 2021"}*/}
-        {/*</p>*/}
+        {/* Width and height are set so the hero does not reflow while the
+            portrait loads: it is the largest element above the fold. */}
+        <picture>
+          <source srcSet="/images/userpic.webp" type="image/webp" />
+          <img
+            src="/images/userpic.jpg"
+            alt={language === "en" ? "Ivan Donchenko" : "Иван Донченко"}
+            width={384}
+            height={384}
+            fetchPriority="high"
+            className="mx-auto w-64 h-64 sm:w-80 sm:h-80 md:w-84 md:h-84 lg:w-96 lg:h-96 rounded-2xl object-cover shadow-xl"
+          />
+        </picture>
       </section>
 
       {/* Features Grid */}

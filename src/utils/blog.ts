@@ -6,9 +6,32 @@ export interface BlogPostMeta {
   slug: string;
   title: string;
   date: string;
+  /** Optional `updated:` front-matter. Feeds dateModified and sitemap lastmod. */
+  updated: string;
+  /** Article lede, shown on the page and in the listing. Can run long. */
   description: string;
+  /**
+   * Meta description. Search engines cut off around 160 characters, and the
+   * lede of an article is usually longer, so `seoDescription:` front-matter
+   * overrides it; without one the lede is truncated on a word boundary.
+   */
+  seoDescription: string;
   tags: string[];
   readTime: number;
+  /**
+   * Social preview image, already resolved to its emitted asset URL. Taken from
+   * the `image:` front-matter when present, otherwise the first image in the
+   * body, so an article never has to opt in to get a link preview.
+   */
+  image: string;
+  /**
+   * Overrides rel=canonical for articles whose primary home is elsewhere
+   * (a Habr cross-post that ranked first, for example). Empty means this site
+   * is canonical.
+   */
+  canonical: string;
+  author: string;
+  draft: boolean;
 }
 
 export interface BlogPost extends BlogPostMeta {
@@ -17,20 +40,20 @@ export interface BlogPost extends BlogPostMeta {
 
 // `import.meta.glob` is a compile-time macro: the pattern and options must be
 // inline literals so Vite can statically apply `?raw` and eager loading.
-const enModules = import.meta.glob("/src/content/blog/*/index.en.md", {
+const enModules = import.meta.glob("/src/blog/*/index.en.md", {
   query: "?raw",
   import: "default",
   eager: true,
 }) as Record<string, string>;
 
-const ruModules = import.meta.glob("/src/content/blog/*/index.ru.md", {
+const ruModules = import.meta.glob("/src/blog/*/index.ru.md", {
   query: "?raw",
   import: "default",
   eager: true,
 }) as Record<string, string>;
 
 // No-suffix `index.md` is treated as the Russian default (project convention).
-const defaultModules = import.meta.glob("/src/content/blog/*/index.md", {
+const defaultModules = import.meta.glob("/src/blog/*/index.md", {
   query: "?raw",
   import: "default",
   eager: true,
@@ -42,10 +65,10 @@ const defaultModules = import.meta.glob("/src/content/blog/*/index.md", {
 // Only web-delivery formats are matched: the eager glob emits everything it
 // matches, so listing PNG/JPEG here would ship the heavy editing originals that
 // articles keep next to their exported images. Reference webp/svg in markdown.
-const imageModules = import.meta.glob(
-  "/src/content/blog/**/*.{webp,svg,avif}",
-  { import: "default", eager: true },
-) as Record<string, string>;
+const imageModules = import.meta.glob("/src/blog/**/*.{webp,svg,avif}", {
+  import: "default",
+  eager: true,
+}) as Record<string, string>;
 
 type RawEntry = Partial<Record<Language, string>>;
 
@@ -80,6 +103,7 @@ function resolveRaw(slug: string, language: Language): string | undefined {
 }
 
 const WORDS_PER_MINUTE = 200;
+const DEFAULT_AUTHOR = "Ivan Donchenko";
 
 function estimateReadTime(content: string): number {
   const words = content.trim().split(/\s+/).filter(Boolean).length;
@@ -106,7 +130,7 @@ function normalizePath(path: string): string {
 }
 
 function resolveImages(slug: string, body: string): string {
-  const base = `/src/content/blog/${slug}/`;
+  const base = `/src/blog/${slug}/`;
   return body.replace(
     /(!\[[^\]]*\]\()([^)\s]+)(\s+"[^"]*")?(\))/g,
     (full, prefix, url, title, suffix) => {
@@ -121,6 +145,28 @@ function resolveImages(slug: string, body: string): string {
       return resolved ? `${prefix}${resolved}${title ?? ""}${suffix}` : full;
     },
   );
+}
+
+const IMAGE_RE = /!\[[^\]]*\]\(([^)\s]+)/;
+const META_DESCRIPTION_LIMIT = 160;
+
+function truncate(text: string, limit: number): string {
+  if (text.length <= limit) return text;
+  const cut = text.slice(0, limit);
+  const boundary = cut.lastIndexOf(" ");
+  return `${(boundary > limit * 0.6 ? cut.slice(0, boundary) : cut).replace(/[,;:.\s—-]+$/, "")}…`;
+}
+
+/** Resolves a front-matter image path the same way body images are resolved. */
+function resolveImage(slug: string, url: string): string {
+  if (!url) return "";
+  if (/^(https?:)?\/\//.test(url) || url.startsWith("/")) return url;
+  return imageModules[normalizePath(`/src/blog/${slug}/${url}`)] ?? "";
+}
+
+/** First image of the already-resolved body, used as the default og:image. */
+function firstImage(resolvedBody: string): string {
+  return resolvedBody.match(IMAGE_RE)?.[1] ?? "";
 }
 
 function firstParagraph(body: string): string {
@@ -155,14 +201,26 @@ function toPost(slug: string, raw: string): BlogPost {
       ? data.description
       : firstParagraph(body);
 
+  const resolvedBody = resolveImages(slug, body);
+  const declaredImage = typeof data.image === "string" ? data.image : "";
+
   return {
     slug,
     title,
     date: typeof data.date === "string" ? data.date : "",
+    updated: typeof data.updated === "string" ? data.updated : "",
     description,
+    seoDescription:
+      typeof data.seoDescription === "string" && data.seoDescription
+        ? data.seoDescription
+        : truncate(description, META_DESCRIPTION_LIMIT),
     tags: Array.isArray(data.tags) ? data.tags : [],
     readTime: estimateReadTime(content),
-    content: resolveImages(slug, body),
+    image: resolveImage(slug, declaredImage) || firstImage(resolvedBody),
+    canonical: typeof data.canonical === "string" ? data.canonical : "",
+    author: typeof data.author === "string" ? data.author : DEFAULT_AUTHOR,
+    draft: data.draft === "true",
+    content: resolvedBody,
   };
 }
 
@@ -172,7 +230,7 @@ export function getBlogPosts(language: Language): BlogPostMeta[] {
       const raw = resolveRaw(slug, language);
       return raw ? toPost(slug, raw) : null;
     })
-    .filter((post): post is BlogPost => post !== null)
+    .filter((post): post is BlogPost => post !== null && !post.draft)
     .sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 

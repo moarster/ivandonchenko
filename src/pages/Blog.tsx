@@ -6,6 +6,7 @@ import { TagList } from "@/components/ui/TagList";
 import { useLanguage } from "@/hooks/useLanguage";
 import { getBlogPosts } from "@/utils/blog";
 import { formatDate } from "@/utils/dateFormatter";
+import { blogJsonLd, pageMeta } from "@/utils/seo";
 
 export function Blog() {
   const { language, t, localePath } = useLanguage();
@@ -14,10 +15,8 @@ export function Blog() {
   return (
     <div className="container mx-auto px-4 py-12">
       <SEO
-        title={
-          language === "en" ? "Blog — Ivan Donchenko" : "Блог — Иван Донченко"
-        }
-        description={t("blogSubtitle")}
+        {...pageMeta("/blog", language)}
+        jsonLd={blogJsonLd(language, posts)}
       />
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-display font-bold mb-4">{t("blog")}</h1>
